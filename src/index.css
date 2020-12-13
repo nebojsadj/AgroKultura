@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.border {
+    /* border: 2px solid green !important; */
+    background-color: rgb(79, 141, 79);
+}
+
+.active {
+    /* background-color: rgb(213, 245, 213) !important; */
+    background-color: white !important;
+}
+
+.navNone {
+    background-color: rgb(77, 131, 77);
+    color: white;
+}
+
+.navNone:hover {
+    color: black !important;
+    /* background-color: rgb(137, 189, 137); */
+    /* background-color: white; */
+}
+
+.colorFooter {
+    color: #ccc;
+}
+
+#line {
+    width: 95%;
+    height: 2px;
+    background-color: #bbb;
+    margin: auto;
+}
+
+.contactWrap {
+    border: 2px solid rgb(79, 141, 79) !important;
+    border-radius: 10px;
+    box-shadow: 0 0 9px rgb(79, 141, 79);
+}
+
+.accordion {
+    border: 2px solid rgb(79, 141, 79);
+    box-shadow: 0 0 9px rgb(79, 141, 79);
+    border-radius: 10px;
+}
+
+.drop {
+    display: flex;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.bgItems {
+    border: 1px solid rgb(79, 141, 79) !important;
+    box-shadow: 0 0 7px black;
+}
+
+.bgItem:hover {
+    background-color: rgb(79, 141, 79);
+    color: white;
+}
