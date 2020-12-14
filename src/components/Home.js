@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { data } from "./Data";
 import svg from "./SVG/serbia.svg";
-import { jabucasto, jagodasto, kosticavo } from "./Fruits";
-import { panes } from "./Panes";
+// import { jabucasto, jagodasto, kosticavo } from "./Fruits";
+// import { panes } from "./Panes";
 import { Dropdown, Modal } from "react-bootstrap";
 import { GiShinyApple, GiStrawberry, GiCherry, GiAlmond } from "react-icons/gi";
+import FruitBtns from "./FruitBtns";
 
 function Home() {
   const [state, setState] = useState("");
@@ -22,7 +23,8 @@ function Home() {
     <>
       <div className="container mt-5">
         <div className="row">
-          <div className="col-12 drop">
+          <div className="hl"></div>
+          <div className="col-12 mt-2 drop">
             <Dropdown onSelect={() => mark("jabucasto")}>
               <Dropdown.Toggle
                 variant="success"
@@ -37,7 +39,6 @@ function Home() {
                 <Dropdown.Item className="bgItem">Dunja</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-
             <Dropdown onSelect={() => mark("jagodasto")} className="ml-4">
               <Dropdown.Toggle
                 variant="success"
@@ -68,7 +69,6 @@ function Home() {
                 <Dropdown.Item className="bgItem">Sljiva</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-
             <Dropdown onSelect={() => mark("jezgrasto")} className="ml-4">
               <Dropdown.Toggle
                 variant="success"
@@ -85,6 +85,7 @@ function Home() {
               </Dropdown.Menu>
             </Dropdown>
           </div>
+          <div className="hl mt-2"></div>
         </div>
         <div className="row mt-5">
           <div className="col-12 drop">
@@ -119,6 +120,13 @@ function Home() {
               })}
             </svg>
           </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col text-center">
+          <div className="hl"></div>
+          <FruitBtns />
+          <div className="hl mb-5"></div>
         </div>
       </div>
       <Modal

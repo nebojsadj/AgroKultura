@@ -67,6 +67,12 @@
 }
 
 .iconBorder {
-    border-top: 1px solid rgb(79, 141, 79);
-    border-bottom: 1px solid rgb(79, 141, 79);
+    border-top: 2px solid rgb(79, 141, 79);
+    border-bottom: 2px solid rgb(79, 141, 79);
+}
+
+.hl {
+    width: 60vh;
+    border: 1px solid rgb(79, 141, 79);
+    margin: auto;
 }
