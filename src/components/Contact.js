@@ -32,10 +32,14 @@ function Contact() {
         <div className="col-10 offset-1 mt-5 contactWrap border">
           <div className="holder">
             <div className="text-center mt-4">
-              <FaPhoneAlt size="1.8em" />
+              <FaPhoneAlt className="text-light" size="2em" />
               <br />
               <div ref={ref}>
-                <Button variant="dark" className="mt-4" onClick={handleClick}>
+                <Button
+                  variant="outline-light"
+                  className="mt-4"
+                  onClick={handleClick}
+                >
                   Kontak telefon!
                 </Button>
                 <Overlay
@@ -50,19 +54,23 @@ function Contact() {
                       as="h1"
                       style={{
                         textAlign: "center",
-                        fontSize: "20px",
+                        fontSize: "22px",
                       }}
                     >
                       +381645553331
                     </Popover.Title>
-                    <Popover.Content>
-                      <strong>Radnim danima:</strong> od 9h do 17h
+                    <Popover.Content
+                      style={{
+                        textAlign: "center",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Radnim danima: od 9h do 17h
                     </Popover.Content>
                   </Popover>
                 </Overlay>
               </div>
             </div>
-            {/* <h4 className="text-center mt-3">Kontakt</h4> */}
             <p
               style={{ fontSize: "18px", color: "white" }}
               className="mt-4 mb-4"
@@ -78,9 +86,9 @@ function Contact() {
       </div>
       <div className="row">
         <div className="col-6 offset-3 text-center mt-4 iconBorder">
-          <AiOutlineMail size="2.8em" />
-          <AiFillFacebook size="2.6em" className="ml-2" />
-          <GrInstagram size="2.2em" className="ml-2" />
+          <AiOutlineMail size="3em" className="iconColor mt-2 mb-2" />
+          <AiFillFacebook size="2.8em" className="ml-2 iconColor" />
+          <GrInstagram size="2.4em" className="ml-2 iconColor" />
         </div>
       </div>
       <div className="row">

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { data } from "./Data";
 import svg from "./SVG/serbia.svg";
-// import { jabucasto, jagodasto, kosticavo } from "./Fruits";
-// import { panes } from "./Panes";
 import { Dropdown, Modal } from "react-bootstrap";
 import { GiShinyApple, GiStrawberry, GiCherry, GiAlmond } from "react-icons/gi";
 import FruitBtns from "./FruitBtns";
@@ -11,12 +9,12 @@ function Home() {
   const [state, setState] = useState("");
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState(false);
+  const [title, setTitle] = useState("Izaberite okrug.");
 
   const mark = (option) => {
     let current = data.filter((el) => el.isCenter.includes(option));
     let currentId = current.map((el) => el.id);
     setState(currentId);
-    console.log(state);
   };
 
   return (
@@ -87,18 +85,27 @@ function Home() {
           </div>
           <div className="hl mt-2"></div>
         </div>
-        <div className="row mt-5">
+        <div className="row">
+          <div className="col-10 offset-1">
+            <h4 className="text-center mt-3" style={{ color: "darkGreen" }}>
+              {(state && title) || "."}
+            </h4>
+          </div>
+        </div>
+        <div className="row">
           <div className="col-12 drop">
             <svg
               width="560"
-              height="750"
-              viewBox="0 0 550 800"
+              height="650"
+              viewBox="0 0 550 850"
               fill="rgb(79, 141, 79)"
               stroke="white"
             >
               {data.map((location) => {
                 return (
                   <use
+                    onMouseOver={() => setTitle(location.title)}
+                    onMouseLeave={() => setTitle("Izaberite okrug.")}
                     key={location.id}
                     onClick={
                       state.includes(location.id)
@@ -113,7 +120,9 @@ function Home() {
                     }
                     xlinkHref={`${svg}#${location.id}`}
                     fill={
-                      state.includes(location.id) ? "red" : "rgb(79, 141, 79)"
+                      state.includes(location.id)
+                        ? "rgb(255, 102, 102)"
+                        : "rgb(79, 141, 79)"
                     }
                   />
                 );

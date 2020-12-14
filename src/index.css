@@ -76,3 +76,11 @@
     border: 1px solid rgb(79, 141, 79);
     margin: auto;
 }
+
+use:hover {
+    opacity: 0.5;
+}
+
+.iconColor {
+    color: rgb(79, 141, 79);
+}
