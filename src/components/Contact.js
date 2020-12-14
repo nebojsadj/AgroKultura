@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Form, Col, Button, Overlay, Popover } from "react-bootstrap";
 import { FaPhoneAlt } from "react-icons/fa";
+import { AiOutlineMail, AiFillFacebook } from "react-icons/ai";
+import { GrInstagram } from "react-icons/gr";
 
 function Contact() {
   const [validated, setValidated] = useState(false);
@@ -75,7 +77,14 @@ function Contact() {
         </div>
       </div>
       <div className="row">
-        <div className="col-10 offset-1 mt-5 mb-5 contactWrap border">
+        <div className="col-6 offset-3 text-center mt-4 iconBorder">
+          <AiOutlineMail size="2.8em" />
+          <AiFillFacebook size="2.6em" className="ml-2" />
+          <GrInstagram size="2.2em" className="ml-2" />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-10 offset-1 mt-4 mb-5 contactWrap border">
           <div className="holder">
             <Form
               noValidate
