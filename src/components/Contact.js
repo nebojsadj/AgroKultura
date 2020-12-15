@@ -54,15 +54,16 @@ function Contact() {
                       as="h1"
                       style={{
                         textAlign: "center",
-                        fontSize: "22px",
+                        fontSize: "21px",
                       }}
                     >
                       +381645553331
                     </Popover.Title>
                     <Popover.Content
+                      as="h3"
                       style={{
                         textAlign: "center",
-                        fontSize: "16px",
+                        fontSize: "18px",
                       }}
                     >
                       Radnim danima: od 9h do 17h
