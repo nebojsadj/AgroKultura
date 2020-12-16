@@ -11,7 +11,7 @@ import {
   breskva,
   malina,
   kupina,
-} from "./Fruits";
+} from "./Data/DataFruits";
 
 function FruitBtns() {
   const [showModal, setShowModal] = useState(false);
@@ -23,151 +23,152 @@ function FruitBtns() {
   };
 
   return (
-    <>
-      <ButtonGroup size="sm" className="mt-2" aria-label="First group">
-        <Button
-          onClick={() => {
-            forModal(jagoda);
-          }}
-          variant="success"
-          className="border"
-        >
-          Jabuka
-        </Button>{" "}
-        <Button
-          onClick={() => {
-            forModal(jagoda);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Kruska
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(jagoda);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Dunja
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(jagoda);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Jagoda
-        </Button>{" "}
-        <Button
-          onClick={() => {
-            forModal(malina);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Malina
-        </Button>{" "}
-      </ButtonGroup>
-      <br />
-      <ButtonGroup size="sm" className="mt-2" aria-label="First group">
-        <Button
-          onClick={() => {
-            forModal(kupina);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Kupina
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(breskva);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Breskva
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(jagoda);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Kajsija
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(tresnja);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Tresnja
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(visnja);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Visnja
-        </Button>
-      </ButtonGroup>
-      <br />
-      <ButtonGroup size="sm" className="mt-2 mb-2" aria-label="First group">
-        <Button
-          onClick={() => {
-            forModal(sljiva);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Sljiva
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(orah);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Orah
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(leska);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Leska
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(jagoda);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Kesten
-        </Button>
-        <Button
-          onClick={() => {
-            forModal(badem);
-          }}
-          variant="success"
-          className="ml-1 border"
-        >
-          Badem
-        </Button>
-      </ButtonGroup>
+    <div className="container">
+      <div className="row">
+        <div className="col-12 text-center">
+          <ButtonGroup size="sm" className="mt-2" aria-label="group1">
+            <Button
+              onClick={() => {
+                forModal(jagoda);
+              }}
+              variant="success"
+              className="border"
+            >
+              Jabuka
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(jagoda);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Kruska
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(jagoda);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Dunja
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(jagoda);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Jagoda
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(malina);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Malina
+            </Button>
+          </ButtonGroup>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 text-center">
+          <ButtonGroup size="sm" className="mt-2" aria-label="group2">
+            <Button
+              onClick={() => {
+                forModal(kupina);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Kupina
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(breskva);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Breskva
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(jagoda);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Kajsija
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(sljiva);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Sljiva
+            </Button>
+          </ButtonGroup>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 text-center">
+          <ButtonGroup size="sm" className="mt-2" aria-label="group3">
+            <Button
+              onClick={() => {
+                forModal(tresnja);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Tresnja
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(visnja);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Visnja
+            </Button>
 
+            <Button
+              onClick={() => {
+                forModal(orah);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Orah
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(leska);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Leska
+            </Button>
+            <Button
+              onClick={() => {
+                forModal(badem);
+              }}
+              variant="success"
+              className="ml-1 border"
+            >
+              Badem
+            </Button>
+          </ButtonGroup>
+        </div>
+      </div>
       <Modal
         size="lg"
         show={showModal}
@@ -212,7 +213,7 @@ function FruitBtns() {
           </div>
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 }
 

@@ -49,7 +49,13 @@ function Contact() {
                   container={ref.current}
                   containerPadding={20}
                 >
-                  <Popover id="popover-contained">
+                  <Popover
+                    id="popover-contained"
+                    style={{
+                      border: "1px solid black",
+                      boxShadow: "0 0 9px black",
+                    }}
+                  >
                     <Popover.Title
                       as="h1"
                       style={{
@@ -57,7 +63,7 @@ function Contact() {
                         fontSize: "21px",
                       }}
                     >
-                      +381645553331
+                      +381 64 8066436
                     </Popover.Title>
                     <Popover.Content
                       as="h3"
@@ -94,79 +100,68 @@ function Contact() {
       </div>
       <div className="row">
         <div className="col-10 offset-1 mt-4 mb-5 contactWrap border">
-          <div className="holder">
-            <Form
-              noValidate
-              validated={validated}
-              onSubmit={handleSubmit}
-              className="mt-4 mb-4"
-            >
-              <Form.Row>
-                <Form.Group as={Col} md="4" controlId="validationCustom01">
-                  <Form.Label>Ime</Form.Label>
-                  <Form.Control required type="text" placeholder="Vase ime" />
-                  <Form.Control.Feedback type="invalid">
-                    Molimo Vas unesite vase ime.
-                  </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} md="4" controlId="validationCustom02">
-                  <Form.Label>Prezime</Form.Label>
-                  <Form.Control
-                    required
-                    type="text"
-                    placeholder="Vase prezime"
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    Molimo Vas unesite vase prezime.
-                  </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group
-                  as={Col}
-                  md="4"
-                  controlId="validationCustomUsername"
-                >
-                  <Form.Label>Telefon</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Vas telefon"
-                    required
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    Molimo Vas unesite vas telefon.
-                  </Form.Control.Feedback>
-                </Form.Group>
-              </Form.Row>
-              <Form.Row>
-                <Form.Group as={Col} md="12" controlId="validationCustom03">
-                  <Form.Label>Poruka</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    type="text"
-                    placeholder="Vasa poruka"
-                    required
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    Molimo Vas unesite vasu poruku.
-                  </Form.Control.Feedback>
-                </Form.Group>
-              </Form.Row>
-              <Form.Row>
-                <Form.Group as={Col} md="12" controlId="validationCustom03">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="text" placeholder="Email" required />
-                  <Form.Control.Feedback type="invalid">
-                    Molimo vas unesite vasu email adresu.
-                  </Form.Control.Feedback>
-                </Form.Group>
-              </Form.Row>
-              <Form.Group>
-                <Form.Check required label="Pristanite na uslove i odredbe" />
+          <Form
+            noValidate
+            validated={validated}
+            onSubmit={handleSubmit}
+            className="mt-4 mb-4"
+          >
+            <Form.Row>
+              <Form.Group as={Col} md="4" controlId="validationCustom01">
+                <Form.Label>Ime</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Vase ime"
+                  autoComplete="off"
+                />
               </Form.Group>
-              <Button variant="dark" type="submit" className="mb-3">
-                Posalji
-              </Button>
-            </Form>
-          </div>
+              <Form.Group as={Col} md="4" controlId="validationCustom02">
+                <Form.Label>Prezime</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Vase prezime"
+                  autoComplete="off"
+                />
+              </Form.Group>
+              <Form.Group as={Col} md="4" controlId="validationCustomUsername">
+                <Form.Label>Telefon</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Vas telefon"
+                  autoComplete="off"
+                  required
+                />
+              </Form.Group>
+            </Form.Row>
+            <Form.Row>
+              <Form.Group as={Col} md="12" controlId="validationCustom03">
+                <Form.Label>Poruka</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  type="text"
+                  placeholder="Vasa poruka"
+                  autoComplete="off"
+                  required
+                />
+              </Form.Group>
+            </Form.Row>
+            <Form.Row>
+              <Form.Group as={Col} md="12" controlId="validationCustom03">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Vas_email@gmail.com"
+                  autoComplete="off"
+                  required
+                />
+              </Form.Group>
+            </Form.Row>
+            <Button variant="dark" type="submit" className="mb-3">
+              Posalji
+            </Button>
+          </Form>
         </div>
       </div>
     </div>

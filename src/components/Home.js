@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { data } from "./Data";
-import svg from "./SVG/serbia.svg";
+import { data } from "./Data/DataCity";
+import svg from "./Data/serbia.svg";
 import { Dropdown, Modal } from "react-bootstrap";
 import { GiShinyApple, GiStrawberry, GiCherry, GiAlmond } from "react-icons/gi";
 import FruitBtns from "./FruitBtns";
@@ -9,7 +9,7 @@ function Home() {
   const [state, setState] = useState("");
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState(false);
-  const [title, setTitle] = useState("Izaberite okrug.");
+  const [title, setTitle] = useState("Izaberite okrug");
 
   const mark = (option) => {
     let current = data.filter((el) => el.isCenter.includes(option));
@@ -105,7 +105,7 @@ function Home() {
                 return (
                   <use
                     onMouseOver={() => setTitle(location.title)}
-                    onMouseLeave={() => setTitle("Izaberite okrug.")}
+                    onMouseLeave={() => setTitle("Izaberite okrug")}
                     key={location.id}
                     onClick={
                       state.includes(location.id)
@@ -131,14 +131,11 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col text-center">
-          <div className="hl"></div>
-          <FruitBtns />
-          <div className="hl mb-5"></div>
-        </div>
-      </div>
+      <div className="hl"></div>
+      <FruitBtns />
+      <div className="hl mt-2 mb-5"></div>
       <Modal
+        size="lg"
         show={show}
         onHide={() => setShow(false)}
         dialogClassName="modal-90w"
@@ -147,21 +144,19 @@ function Home() {
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-custom-modal-styling-title">
-            {modal.title}
-            <br />
-            {modal.city}
+            <h2>{modal.title}</h2>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>
-            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-            ipsam atque a dolores quisquam quisquam adipisci possimus
-            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-            deleniti rem!
-          </p>
+          <h3>{modal.city}</h3>
+          <div className="col-10 offset-1">
+            <img src={modal.img} alt={modal.city} className="img" />
+          </div>
+          <h4>{modal.h1}</h4>
+          <p>{modal.p1}</p>
+          <h5>{modal.h2}</h5>
+          <p>{modal.p2}</p>
+          <p>{modal.p3}</p>
         </Modal.Body>
       </Modal>
     </>

@@ -4,12 +4,10 @@
 }
 
 .border {
-    /* border: 2px solid green !important; */
     background-color: rgb(79, 141, 79);
 }
 
 .active {
-    /* background-color: rgb(213, 245, 213) !important; */
     background-color: white !important;
 }
 
@@ -20,8 +18,6 @@
 
 .navNone:hover {
     color: black !important;
-    /* background-color: rgb(137, 189, 137); */
-    /* background-color: white; */
 }
 
 .colorFooter {
@@ -38,7 +34,7 @@
 .contactWrap {
     border: 2px solid rgb(79, 141, 79) !important;
     border-radius: 10px;
-    box-shadow: 0 0 9px rgb(79, 141, 79);
+    /* box-shadow: 0 0 6px rgb(79, 141, 79); */
 }
 
 .accordion {
@@ -83,4 +79,12 @@ use:hover {
 
 .iconColor {
     color: rgb(79, 141, 79);
+}
+
+.img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
