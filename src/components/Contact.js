@@ -30,65 +30,60 @@ function Contact() {
     <div className="container">
       <div className="row">
         <div className="col-10 offset-1 mt-5 contactWrap border">
-          <div className="holder">
-            <div className="text-center mt-4">
-              <FaPhoneAlt className="text-light" size="2em" />
-              <br />
-              <div ref={ref}>
-                <Button
-                  variant="outline-light"
-                  className="mt-4"
-                  onClick={handleClick}
+          <div className="text-center mt-4">
+            <FaPhoneAlt className="text-light" size="2em" />
+            <br />
+            <div ref={ref}>
+              <Button
+                variant="outline-light"
+                className="mt-4"
+                onClick={handleClick}
+              >
+                Kontak telefon!
+              </Button>
+              <Overlay
+                show={show}
+                target={target}
+                placement="bottom"
+                container={ref.current}
+                containerPadding={20}
+              >
+                <Popover
+                  id="popover-contained"
+                  style={{
+                    border: "1px solid black",
+                    boxShadow: "0 0 9px black",
+                  }}
                 >
-                  Kontak telefon!
-                </Button>
-                <Overlay
-                  show={show}
-                  target={target}
-                  placement="bottom"
-                  container={ref.current}
-                  containerPadding={20}
-                >
-                  <Popover
-                    id="popover-contained"
+                  <Popover.Title
+                    as="h1"
                     style={{
-                      border: "1px solid black",
-                      boxShadow: "0 0 9px black",
+                      textAlign: "center",
+                      fontSize: "21px",
                     }}
                   >
-                    <Popover.Title
-                      as="h1"
-                      style={{
-                        textAlign: "center",
-                        fontSize: "21px",
-                      }}
-                    >
-                      +381 64 8066436
-                    </Popover.Title>
-                    <Popover.Content
-                      as="h3"
-                      style={{
-                        textAlign: "center",
-                        fontSize: "18px",
-                      }}
-                    >
-                      Radnim danima: od 9h do 17h
-                    </Popover.Content>
-                  </Popover>
-                </Overlay>
-              </div>
+                    +381 64 8066436
+                  </Popover.Title>
+                  <Popover.Content
+                    as="h3"
+                    style={{
+                      textAlign: "center",
+                      fontSize: "18px",
+                    }}
+                  >
+                    Radnim danima: od 9h do 17h
+                  </Popover.Content>
+                </Popover>
+              </Overlay>
             </div>
-            <p
-              style={{ fontSize: "18px", color: "white" }}
-              className="mt-4 mb-4"
-            >
-              Zainteresovani ste za nase usluge i cene nasih usluga? Budite
-              slobodni da nam posaljete informativni email sa opisom, vaseg
-              postojeceg zasada ili zasada koji planirate da podignete, a jedan
-              od nasih inzenjera ce Vas kontaktirati u najkracem mogucem roku u
-              cilju problema.
-            </p>
           </div>
+          <p style={{ fontSize: "18px", color: "white" }} className="mt-4 mb-4">
+            Zainteresovani ste za nase usluge i cene nasih usluga? Budite
+            slobodni da nam posaljete informativni email sa opisom, vaseg
+            postojeceg zasada ili zasada koji planirate da podignete, a jedan od
+            nasih inzenjera ce Vas kontaktirati u najkracem mogucem roku u cilju
+            problema.
+          </p>
         </div>
       </div>
       <div className="row">

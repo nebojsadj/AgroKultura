@@ -1,5 +1,19 @@
 import React, { useState } from "react";
 import { Button, ButtonGroup, Modal } from "react-bootstrap";
+import kajsijaImg from "./Data/imgs/kajsijaImg.jpg";
+import bademImg from "./Data/imgs/bademImg.jpg";
+import breskvaImg from "./Data/imgs/breskvaImg.jpg";
+import dunjaImg from "./Data/imgs/dunjaImg.jpg";
+import jabukaImg from "./Data/imgs/jabukaImg.jpg";
+import jagodaImg from "./Data/imgs/jagodaImg.jpg";
+import kruskaImg from "./Data/imgs/kruskaImg.jpg";
+import kupinaImg from "./Data/imgs/kupinaImg.jpg";
+import leskaImg from "./Data/imgs/leskaImg.jpg";
+import malinaImg from "./Data/imgs/malinaImg.jpg";
+import orahImg from "./Data/imgs/orahImg.jpg";
+import sljivaImg from "./Data/imgs/sljivaImg.jpg";
+import tresnjaImg from "./Data/imgs/tresnjaImg.jpg";
+import visnjaImg from "./Data/imgs/visnjaImg.jpg";
 import {
   jagoda,
   orah,
@@ -11,6 +25,10 @@ import {
   breskva,
   malina,
   kupina,
+  jabuka,
+  kruska,
+  dunja,
+  kajsija,
 } from "./Data/DataFruits";
 
 function FruitBtns() {
@@ -22,6 +40,41 @@ function FruitBtns() {
     setShowModal(true);
   };
 
+  const pictures = () => {
+    switch (fruit.name) {
+      case "Badem":
+        return bademImg;
+      case "Breskva":
+        return breskvaImg;
+      case "Dunja":
+        return dunjaImg;
+      case "Jabuka":
+        return jabukaImg;
+      case "Jagoda":
+        return jagodaImg;
+      case "Kajsija":
+        return kajsijaImg;
+      case "Kruska":
+        return kruskaImg;
+      case "Kupina":
+        return kupinaImg;
+      case "Leska":
+        return leskaImg;
+      case "Malina":
+        return malinaImg;
+      case "Orah":
+        return orahImg;
+      case "Sljiva":
+        return sljivaImg;
+      case "Tresnja":
+        return tresnjaImg;
+      case "Visnja":
+        return visnjaImg;
+      default:
+        return bademImg;
+    }
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -29,7 +82,7 @@ function FruitBtns() {
           <ButtonGroup size="sm" className="mt-2" aria-label="group1">
             <Button
               onClick={() => {
-                forModal(jagoda);
+                forModal(jabuka);
               }}
               variant="success"
               className="border"
@@ -38,7 +91,7 @@ function FruitBtns() {
             </Button>
             <Button
               onClick={() => {
-                forModal(jagoda);
+                forModal(kruska);
               }}
               variant="success"
               className="ml-1 border"
@@ -47,7 +100,7 @@ function FruitBtns() {
             </Button>
             <Button
               onClick={() => {
-                forModal(jagoda);
+                forModal(dunja);
               }}
               variant="success"
               className="ml-1 border"
@@ -98,7 +151,7 @@ function FruitBtns() {
             </Button>
             <Button
               onClick={() => {
-                forModal(jagoda);
+                forModal(kajsija);
               }}
               variant="success"
               className="ml-1 border"
@@ -175,7 +228,7 @@ function FruitBtns() {
         onHide={() => setShowModal(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className="text-light border">
           <Modal.Title id="example-modal-sizes-title-lg">
             {fruit.name}
           </Modal.Title>
@@ -184,6 +237,7 @@ function FruitBtns() {
           <div className="container">
             <div className="row">
               <div className="col-10 offset-1">
+                <img src={pictures()} alt={fruit.name} className="img" />
                 <p>{fruit.content.uvod}</p>
                 <h4>{fruit.content.h1}</h4>
                 <h5>{fruit.content.h2}</h5>
@@ -208,6 +262,8 @@ function FruitBtns() {
                 <p>{fruit.content.p11}</p>
                 <h5>{fruit.content.h12}</h5>
                 <p>{fruit.content.p12}</p>
+                <h5>{fruit.content.h13}</h5>
+                <p>{fruit.content.p13}</p>
               </div>
             </div>
           </div>
