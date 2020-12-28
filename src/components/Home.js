@@ -3,7 +3,6 @@ import { data } from "./Data/DataCity";
 import svg from "./Data/serbia.svg";
 import { Dropdown, Modal } from "react-bootstrap";
 import { GiShinyApple, GiStrawberry, GiCherry, GiAlmond } from "react-icons/gi";
-import FruitBtns from "./FruitBtns";
 import Beograd from "./Data/imgs/Beograd.jpg";
 import Bor from "./Data/imgs/Bor.jpg";
 import Cacak from "./Data/imgs/Cacak.jpg";
@@ -34,11 +33,45 @@ import Vranje from "./Data/imgs/Vranje.jpg";
 import Zajecar from "./Data/imgs/Zajecar.jpg";
 import Zrenjanin from "./Data/imgs/Zrenjanin.jpg";
 
+import kajsijaImg from "./Data/imgs/kajsijaImg.jpg";
+import bademImg from "./Data/imgs/bademImg.jpg";
+import breskvaImg from "./Data/imgs/breskvaImg.jpg";
+import dunjaImg from "./Data/imgs/dunjaImg.jpg";
+import jabukaImg from "./Data/imgs/jabukaImg.jpg";
+import jagodaImg from "./Data/imgs/jagodaImg.jpg";
+import kruskaImg from "./Data/imgs/kruskaImg.jpg";
+import kupinaImg from "./Data/imgs/kupinaImg.jpg";
+import leskaImg from "./Data/imgs/leskaImg.jpg";
+import malinaImg from "./Data/imgs/malinaImg.jpg";
+import orahImg from "./Data/imgs/orahImg.jpg";
+import sljivaImg from "./Data/imgs/sljivaImg.jpg";
+import tresnjaImg from "./Data/imgs/tresnjaImg.jpg";
+import visnjaImg from "./Data/imgs/visnjaImg.jpg";
+import {
+  jagoda,
+  orah,
+  leska,
+  badem,
+  visnja,
+  tresnja,
+  sljiva,
+  breskva,
+  malina,
+  kupina,
+  jabuka,
+  kruska,
+  dunja,
+  kajsija,
+} from "./Data/DataFruits";
+import ColorsInDistricts from "./ColorsInDistricts";
+
 function Home() {
   const [state, setState] = useState("");
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState(false);
   const [title, setTitle] = useState("Izaberite okrug");
+  const [showModal, setShowModal] = useState(false);
+  const [fruit, setFruit] = useState(jagoda);
 
   const mark = (option) => {
     let current = data.filter((el) => el.isCenter.includes(option));
@@ -46,7 +79,47 @@ function Home() {
     setState(currentId);
   };
 
-  const pictures = () => {
+  const forModal = (name) => {
+    setFruit(name);
+    setShowModal(true);
+  };
+
+  const pictFruit = () => {
+    switch (fruit.name) {
+      case "Badem":
+        return bademImg;
+      case "Breskva":
+        return breskvaImg;
+      case "Dunja":
+        return dunjaImg;
+      case "Jabuka":
+        return jabukaImg;
+      case "Jagoda":
+        return jagodaImg;
+      case "Kajsija":
+        return kajsijaImg;
+      case "Kruska":
+        return kruskaImg;
+      case "Kupina":
+        return kupinaImg;
+      case "Leska":
+        return leskaImg;
+      case "Malina":
+        return malinaImg;
+      case "Orah":
+        return orahImg;
+      case "Sljiva":
+        return sljivaImg;
+      case "Tresnja":
+        return tresnjaImg;
+      case "Visnja":
+        return visnjaImg;
+      default:
+        return bademImg;
+    }
+  };
+
+  const pictCity = () => {
     switch (modal.city) {
       case "Beograd":
         return Beograd;
@@ -113,86 +186,105 @@ function Home() {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-5 mb-5 home">
         <div className="row">
-          <div className="hl"></div>
-          <div className="col-12 mt-2 drop">
-            <Dropdown onSelect={() => mark("jabucasto")}>
+          <div className="col-2 mt-5">
+            <Dropdown
+              style={{ marginLeft: "55%" }}
+              onSelect={() => mark("jabucasto")}
+            >
               <Dropdown.Toggle
-                variant="success"
-                style={{ backgroundColor: "rgb(79, 141, 79)" }}
+                variant="light"
+                className=" m3"
                 id="dropdown-basic"
               >
-                <GiShinyApple size="2em" />
+                <GiShinyApple
+                  size="2em"
+                  className="mIcon"
+                  style={{ color: "#2db300" }}
+                />
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
-                <Dropdown.Item className="bgItem">Jabuka</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Kruska</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Dunja</Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(jabuka);
+                  }}
+                  className="bgItem"
+                >
+                  Jabuka
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(kruska);
+                  }}
+                  className="bgItem"
+                >
+                  Kruska
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(dunja);
+                  }}
+                  className="bgItem"
+                >
+                  Dunja
+                </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Dropdown onSelect={() => mark("jagodasto")} className="ml-4">
+            <Dropdown
+              style={{ marginTop: "500px", marginLeft: "55%" }}
+              onSelect={() => mark("jagodasto")}
+            >
               <Dropdown.Toggle
-                variant="success"
-                style={{ backgroundColor: "rgb(79, 141, 79)" }}
+                variant="light"
+                className="m3"
                 id="dropdown-basic"
               >
-                <GiStrawberry size="2em" />
+                <GiStrawberry
+                  size="2em"
+                  className="mIcon"
+                  style={{ color: "#ff0000" }}
+                />
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
-                <Dropdown.Item className="bgItem">Jagoda</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Malina</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Kupina</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <Dropdown onSelect={() => mark("kosticavo")} className="ml-4">
-              <Dropdown.Toggle
-                variant="success"
-                style={{ backgroundColor: "rgb(79, 141, 79)" }}
-                id="dropdown-basic"
-              >
-                <GiCherry size="2em" />
-              </Dropdown.Toggle>
-              <Dropdown.Menu className="bgItems">
-                <Dropdown.Item className="bgItem">Breskva</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Kajsija</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Tresnja</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Visnja</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Sljiva</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <Dropdown onSelect={() => mark("jezgrasto")} className="ml-4">
-              <Dropdown.Toggle
-                variant="success"
-                style={{ backgroundColor: "rgb(79, 141, 79)" }}
-                id="dropdown-basic"
-              >
-                <GiAlmond size="2em" />
-              </Dropdown.Toggle>
-              <Dropdown.Menu className="bgItems">
-                <Dropdown.Item className="bgItem">Orah</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Lesnik</Dropdown.Item>
-                <Dropdown.Item className="bgItem">Badem</Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(jagoda);
+                  }}
+                  className="bgItem"
+                >
+                  Jagoda
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(malina);
+                  }}
+                  className="bgItem"
+                >
+                  Malina
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(kupina);
+                  }}
+                  className="bgItem"
+                >
+                  Kupina
+                </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>
-          <div className="hl mt-2"></div>
-        </div>
-        <div className="row">
-          <div className="col-10 offset-1">
-            <h4 className="text-center mt-3" style={{ color: "darkGreen" }}>
+          <div className="col-8" style={{ textAlign: "center" }}>
+            <h4 className="text-center text-light mt-3">
               {(state && title) || "."}
             </h4>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12 drop">
             <svg
+              className="svgStyle mt-3"
               width="560"
               height="650"
               viewBox="0 0 550 850"
-              fill="rgb(79, 141, 79)"
-              stroke="white"
+              fill="white"
+              stroke="black"
             >
               {data.map((location) => {
                 return (
@@ -215,18 +307,116 @@ function Home() {
                     fill={
                       state.includes(location.id)
                         ? "rgb(255, 102, 102)"
-                        : "rgb(79, 141, 79)"
+                        : "white"
                     }
                   />
                 );
               })}
             </svg>
           </div>
+          <div className="col-2 mt-5">
+            <Dropdown onSelect={() => mark("kosticavo")} className="m3">
+              <Dropdown.Toggle
+                variant="light"
+                className="m3"
+                id="dropdown-basic"
+              >
+                <GiCherry
+                  size="2em"
+                  className="mIcon"
+                  style={{ color: "#990000" }}
+                />
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="bgItems">
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(breskva);
+                  }}
+                  className="bgItem"
+                >
+                  Breskva
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(kajsija);
+                  }}
+                  className="bgItem"
+                >
+                  Kajsija
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(tresnja);
+                  }}
+                  className="bgItem"
+                >
+                  Tresnja
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(visnja);
+                  }}
+                  className="bgItem"
+                >
+                  Visnja
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(sljiva);
+                  }}
+                  className="bgItem"
+                >
+                  Sljiva
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown
+              style={{ marginTop: "500px" }}
+              onSelect={() => mark("jezgrasto")}
+            >
+              <Dropdown.Toggle
+                variant="light"
+                className="m3"
+                id="dropdown-basic"
+              >
+                <GiAlmond
+                  size="2em"
+                  className="mIcon"
+                  style={{ color: "#996633" }}
+                />
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="bgItems">
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(orah);
+                  }}
+                  className="bgItem"
+                >
+                  Orah
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(leska);
+                  }}
+                  className="bgItem"
+                >
+                  Leska
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    forModal(badem);
+                  }}
+                  className="bgItem"
+                >
+                  Badem
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
         </div>
+        <ColorsInDistricts />
       </div>
-      <div className="hl"></div>
-      <FruitBtns />
-      <div className="hl mt-2 mb-5"></div>
+
       <Modal
         size="lg"
         show={show}
@@ -235,7 +425,7 @@ function Home() {
         aria-labelledby="example-custom-modal-styling-title"
         centered
       >
-        <Modal.Header closeButton className="text-light border">
+        <Modal.Header closeButton>
           <Modal.Title id="example-custom-modal-styling-title">
             <h2>{modal.title}</h2>
           </Modal.Title>
@@ -243,13 +433,61 @@ function Home() {
         <Modal.Body>
           <h3>{modal.city}</h3>
           <div className="col-10 offset-1">
-            <img src={pictures()} alt={modal.city} className="img" />
+            <img src={pictCity()} alt={modal.city} className="img" />
           </div>
           <h4>{modal.h1}</h4>
           <p>{modal.p1}</p>
           <h5>{modal.h2}</h5>
           <p>{modal.p2}</p>
           <p>{modal.p3}</p>
+        </Modal.Body>
+      </Modal>
+
+      <Modal
+        size="lg"
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        aria-labelledby="example-modal-sizes-title-lg"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-lg">
+            {fruit.name}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="container">
+            <div className="row">
+              <div className="col-10 offset-1">
+                <img src={pictFruit()} alt={fruit.name} className="img" />
+                <p>{fruit.content.uvod}</p>
+                <h4>{fruit.content.h1}</h4>
+                <h5>{fruit.content.h2}</h5>
+                <p>{fruit.content.p2}</p>
+                <h5>{fruit.content.h3}</h5>
+                <p>{fruit.content.p3}</p>
+                <h5>{fruit.content.h4}</h5>
+                <p>{fruit.content.p4}</p>
+                <h5>{fruit.content.h5}</h5>
+                <p>{fruit.content.p5}</p>
+                <h5>{fruit.content.h6}</h5>
+                <p>{fruit.content.p6}</p>
+                <h5>{fruit.content.h7}</h5>
+                <p>{fruit.content.p7}</p>
+                <h5>{fruit.content.h8}</h5>
+                <p>{fruit.content.p8}</p>
+                <h5>{fruit.content.h9}</h5>
+                <p>{fruit.content.p9}</p>
+                <h5>{fruit.content.h10}</h5>
+                <p>{fruit.content.p10}</p>
+                <h5>{fruit.content.h11}</h5>
+                <p>{fruit.content.p11}</p>
+                <h5>{fruit.content.h12}</h5>
+                <p>{fruit.content.p12}</p>
+                <h5>{fruit.content.h13}</h5>
+                <p>{fruit.content.p13}</p>
+              </div>
+            </div>
+          </div>
         </Modal.Body>
       </Modal>
     </>

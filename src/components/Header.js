@@ -1,10 +1,10 @@
 import React from "react";
+import logo from "./Data/imgs/agroKulturaLogo.png";
 
 function Header() {
   return (
-    <div className="container-fluid text-white border">
-      <h1 className="mt-3">AGRO KULTURA</h1>
-      <h4 className="ml-5 mb-3">Uz nas voce raste!</h4>
+    <div className="container-fluid text-center border">
+      <img className="logoImg mb-1" src={logo} alt={logo} />
     </div>
   );
 }

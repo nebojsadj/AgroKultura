@@ -103,7 +103,7 @@ function Contact() {
           >
             <Form.Row>
               <Form.Group as={Col} md="4" controlId="validationCustom01">
-                <Form.Label>Ime</Form.Label>
+                <Form.Label className="text-light">Ime</Form.Label>
                 <Form.Control
                   required
                   type="text"
@@ -112,7 +112,7 @@ function Contact() {
                 />
               </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationCustom02">
-                <Form.Label>Prezime</Form.Label>
+                <Form.Label className="text-light">Prezime</Form.Label>
                 <Form.Control
                   required
                   type="text"
@@ -121,7 +121,7 @@ function Contact() {
                 />
               </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-                <Form.Label>Telefon</Form.Label>
+                <Form.Label className="text-light">Telefon</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Vas telefon"
@@ -132,7 +132,7 @@ function Contact() {
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col} md="12" controlId="validationCustom03">
-                <Form.Label>Poruka</Form.Label>
+                <Form.Label className="text-light">Poruka</Form.Label>
                 <Form.Control
                   as="textarea"
                   type="text"
@@ -144,7 +144,7 @@ function Contact() {
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col} md="12" controlId="validationCustom03">
-                <Form.Label>Email</Form.Label>
+                <Form.Label className="text-light">Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Vas_email@gmail.com"
@@ -153,7 +153,7 @@ function Contact() {
                 />
               </Form.Group>
             </Form.Row>
-            <Button variant="dark" type="submit" className="mb-3">
+            <Button variant="light" type="submit" className="mb-3">
               Posalji
             </Button>
           </Form>

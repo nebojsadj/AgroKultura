@@ -5,7 +5,7 @@ function Services() {
   return (
     <div className="container mt-5 mb-5">
       <div className="row">
-        <div className="col-12">
+        <div className="col-10 offset-1">
           <Accordion>
             <Card className="text-center">
               <Card.Header className="border">
@@ -15,7 +15,7 @@ function Services() {
                   size="lg"
                   block
                   eventKey="0"
-                  style={{ backgroundColor: "rgb(79, 141, 79)" }}
+                  style={{ backgroundColor: "rgb(105, 175, 105)" }}
                 >
                   Izrada projekta i biznis plana zasada voca
                 </Accordion.Toggle>
@@ -44,7 +44,7 @@ function Services() {
                   size="lg"
                   block
                   eventKey="1"
-                  style={{ backgroundColor: "rgb(79, 141, 79)" }}
+                  style={{ backgroundColor: "rgb(105, 175, 105)" }}
                 >
                   Odrzavanje vec postojecih zasada
                 </Accordion.Toggle>
@@ -73,7 +73,7 @@ function Services() {
                   size="lg"
                   block
                   eventKey="2"
-                  style={{ backgroundColor: "rgb(79, 141, 79)" }}
+                  style={{ backgroundColor: "rgb(105, 175, 105)" }}
                 >
                   Izrada nacrta za postavljanje sistema za navodnjavanje
                 </Accordion.Toggle>
@@ -94,7 +94,6 @@ function Services() {
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
-
             <Card className="text-center">
               <Card.Header className="border">
                 <Accordion.Toggle
@@ -103,7 +102,7 @@ function Services() {
                   size="lg"
                   block
                   eventKey="3"
-                  style={{ backgroundColor: "rgb(79, 141, 79)" }}
+                  style={{ backgroundColor: "rgb(105, 175, 105)" }}
                 >
                   Izrada nacrta i nabavka elemenata za postavljanje
                   protivgradnih mreza
@@ -133,7 +132,7 @@ function Services() {
                   size="lg"
                   block
                   eventKey="4"
-                  style={{ backgroundColor: "rgb(79, 141, 79)" }}
+                  style={{ backgroundColor: "rgb(105, 175, 105)" }}
                 >
                   Pomoc prilikom prikupljanja dokumentacije za podsticajna
                   sredstva raspisana od strane Ministarstva poljoprivrede
@@ -163,7 +162,7 @@ function Services() {
                   size="lg"
                   block
                   eventKey="5"
-                  style={{ backgroundColor: "rgb(79, 141, 79)" }}
+                  style={{ backgroundColor: "rgb(105, 175, 105)" }}
                 >
                   Nabavka sertifikovanog sadnog materijala svih vrsta voca i
                   vinove loze
