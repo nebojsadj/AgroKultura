@@ -5,7 +5,7 @@ import yellow from "./Data/imgs/yellowMap.png";
 
 function ColorsInDistricts() {
   return (
-    <div className="container mt-4 text-center">
+    <div className="container mt-2 text-center">
       <div className="row">
         <div className="col-8 offset-2">
           <div className="row">

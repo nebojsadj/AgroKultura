@@ -50,7 +50,7 @@ import visnjaImg from "./Data/imgs/visnjaImg.jpg";
 import {
   jagoda,
   orah,
-  leska,
+  lesnik,
   badem,
   visnja,
   tresnja,
@@ -66,7 +66,11 @@ import {
 import ColorsInDistricts from "./ColorsInDistricts";
 
 function Home() {
-  const [state, setState] = useState("");
+  const [centers, setCenters] = useState({
+    red: [],
+    orange: [],
+    yellow: [],
+  });
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState(false);
   const [title, setTitle] = useState("Izaberite okrug");
@@ -74,9 +78,10 @@ function Home() {
   const [fruit, setFruit] = useState(jagoda);
 
   const mark = (option) => {
-    let current = data.filter((el) => el.isCenter.includes(option));
-    let currentId = current.map((el) => el.id);
-    setState(currentId);
+    const red = data.filter((el) => el.isRed.includes(option));
+    const orange = data.filter((el) => el.isOrange.includes(option));
+    const yellow = data.filter((el) => el.isYellow.includes(option));
+    setCenters({ red: red, orange: orange, yellow: yellow });
   };
 
   const forModal = (name) => {
@@ -102,7 +107,7 @@ function Home() {
         return kruskaImg;
       case "Kupina":
         return kupinaImg;
-      case "Leska":
+      case "Lesnik":
         return leskaImg;
       case "Malina":
         return malinaImg;
@@ -189,10 +194,7 @@ function Home() {
       <div className="container mt-5 mb-5 home">
         <div className="row">
           <div className="col-2 mt-5">
-            <Dropdown
-              style={{ marginLeft: "55%" }}
-              onSelect={() => mark("jabucasto")}
-            >
+            <Dropdown style={{ marginLeft: "55%" }}>
               <Dropdown.Toggle
                 variant="light"
                 className=" m3"
@@ -207,6 +209,7 @@ function Home() {
               <Dropdown.Menu className="bgItems">
                 <Dropdown.Item
                   onClick={() => {
+                    mark("jabuka");
                     forModal(jabuka);
                   }}
                   className="bgItem"
@@ -215,6 +218,7 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("kruska");
                     forModal(kruska);
                   }}
                   className="bgItem"
@@ -223,6 +227,7 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("dunja");
                     forModal(dunja);
                   }}
                   className="bgItem"
@@ -231,10 +236,7 @@ function Home() {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Dropdown
-              style={{ marginTop: "500px", marginLeft: "55%" }}
-              onSelect={() => mark("jagodasto")}
-            >
+            <Dropdown style={{ marginTop: "500px", marginLeft: "55%" }}>
               <Dropdown.Toggle
                 variant="light"
                 className="m3"
@@ -249,6 +251,7 @@ function Home() {
               <Dropdown.Menu className="bgItems">
                 <Dropdown.Item
                   onClick={() => {
+                    mark("jagoda");
                     forModal(jagoda);
                   }}
                   className="bgItem"
@@ -257,6 +260,7 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("malina");
                     forModal(malina);
                   }}
                   className="bgItem"
@@ -265,18 +269,46 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("kupina");
                     forModal(kupina);
                   }}
                   className="bgItem"
                 >
                   Kupina
                 </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    mark("borovnica");
+                    // forModal(borovnica);
+                  }}
+                  className="bgItem"
+                >
+                  Borovnica
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    mark("ogrozd");
+                    // forModal(ogrozd);
+                  }}
+                  className="bgItem"
+                >
+                  Ogrozd
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={() => {
+                    mark("ribizla");
+                    // forModal(ribizla);
+                  }}
+                  className="bgItem"
+                >
+                  Ribizla
+                </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>
           <div className="col-8" style={{ textAlign: "center" }}>
             <h4 className="text-center text-light mt-3">
-              {(state && title) || "."}
+              {centers.orange.length > 0 ? title : "."}
             </h4>
             <svg
               className="svgStyle mt-3"
@@ -293,7 +325,7 @@ function Home() {
                     onMouseLeave={() => setTitle("Izaberite okrug")}
                     key={location.id}
                     onClick={
-                      state.includes(location.id)
+                      centers.orange.length > 0
                         ? () => {
                             setShow(true);
                             setModal(location);
@@ -301,13 +333,17 @@ function Home() {
                         : null
                     }
                     style={
-                      state.includes(location.id) ? { cursor: "pointer" } : null
+                      centers.orange.length > 0 ? { cursor: "pointer" } : null
                     }
                     xlinkHref={`${svg}#${location.id}`}
                     fill={
-                      state.includes(location.id)
-                        ? "rgb(255, 102, 102)"
-                        : "white"
+                      centers.red.includes(location)
+                        ? "red"
+                        : centers.orange.includes(location)
+                        ? "orange"
+                        : centers.yellow.includes(location)
+                        ? "yellow"
+                        : null
                     }
                   />
                 );
@@ -315,7 +351,7 @@ function Home() {
             </svg>
           </div>
           <div className="col-2 mt-5">
-            <Dropdown onSelect={() => mark("kosticavo")} className="m3">
+            <Dropdown className="m3">
               <Dropdown.Toggle
                 variant="light"
                 className="m3"
@@ -330,6 +366,7 @@ function Home() {
               <Dropdown.Menu className="bgItems">
                 <Dropdown.Item
                   onClick={() => {
+                    mark("breskva");
                     forModal(breskva);
                   }}
                   className="bgItem"
@@ -338,6 +375,7 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("kajsija");
                     forModal(kajsija);
                   }}
                   className="bgItem"
@@ -346,6 +384,7 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("tresnja");
                     forModal(tresnja);
                   }}
                   className="bgItem"
@@ -354,6 +393,7 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("visnja");
                     forModal(visnja);
                   }}
                   className="bgItem"
@@ -362,6 +402,7 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("sljiva");
                     forModal(sljiva);
                   }}
                   className="bgItem"
@@ -370,10 +411,7 @@ function Home() {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Dropdown
-              style={{ marginTop: "500px" }}
-              onSelect={() => mark("jezgrasto")}
-            >
+            <Dropdown style={{ marginTop: "500px" }}>
               <Dropdown.Toggle
                 variant="light"
                 className="m3"
@@ -388,6 +426,7 @@ function Home() {
               <Dropdown.Menu className="bgItems">
                 <Dropdown.Item
                   onClick={() => {
+                    mark("orah");
                     forModal(orah);
                   }}
                   className="bgItem"
@@ -396,14 +435,16 @@ function Home() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
-                    forModal(leska);
+                    mark("lesnik");
+                    forModal(lesnik);
                   }}
                   className="bgItem"
                 >
-                  Leska
+                  Lesnik
                 </Dropdown.Item>
                 <Dropdown.Item
                   onClick={() => {
+                    mark("badem");
                     forModal(badem);
                   }}
                   className="bgItem"
