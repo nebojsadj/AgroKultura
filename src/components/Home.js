@@ -204,7 +204,8 @@ function Home() {
                   size="2em"
                   className="mIcon"
                   style={{ color: "#2db300" }}
-                />
+                />{" "}
+                jabucasto
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
                 <Dropdown.Item
@@ -246,7 +247,8 @@ function Home() {
                   size="2em"
                   className="mIcon"
                   style={{ color: "#ff0000" }}
-                />
+                />{" "}
+                jagodasto
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
                 <Dropdown.Item
@@ -361,7 +363,8 @@ function Home() {
                   size="2em"
                   className="mIcon"
                   style={{ color: "#990000" }}
-                />
+                />{" "}
+                kosticavo
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
                 <Dropdown.Item
@@ -421,7 +424,8 @@ function Home() {
                   size="2em"
                   className="mIcon"
                   style={{ color: "#996633" }}
-                />
+                />{" "}
+                jezgrasto
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
                 <Dropdown.Item

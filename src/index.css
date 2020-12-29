@@ -106,8 +106,6 @@ use:hover {
 }
 
 .home {
-    /* background-image: url("components/Data/imgs/bg1.jpg"); */
-    /* background-size: cover; */
     background-color: rgb(105, 175, 105);
     border-radius: 15px;
 }
@@ -117,18 +115,14 @@ use:hover {
     height: 40px;
 }
 
-body {
-    /* background-color: #515d63; */
-    /* background-color: rgba(231, 229, 219, 0.561); */
-}
-
 .checkPointer:hover {
     color: black !important;
 }
 
 .logoImg {
-    width: 330px;
-    height: 150px;
+    width: 200px;
+    height: 70px;
+    /* margin-left: 2%; */
 }
 
 @media all and (max-width: 576px) {

@@ -34,11 +34,7 @@ function Contact() {
             <FaPhoneAlt className="text-light" size="2em" />
             <br />
             <div ref={ref}>
-              <Button
-                variant="outline-light"
-                className="mt-4"
-                onClick={handleClick}
-              >
+              <Button variant="light" className="mt-4" onClick={handleClick}>
                 Kontak telefon!
               </Button>
               <Overlay
