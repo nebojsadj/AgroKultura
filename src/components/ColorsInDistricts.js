@@ -10,22 +10,24 @@ function ColorsInDistricts() {
         <div className="col-8 offset-2">
           <div className="row">
             <div className="col">
-              <img src={red} alt={red} className="karta" />
-              <span className="ml-3 text-light">Idealno vocarski centri</span>
+              <img src={red} alt={red} className="karta m4" />
+              <span className="ml-3 text-light m44">
+                Idealno vocarski centri
+              </span>
             </div>
           </div>
           <div className="row">
             <div className="col">
-              <img src={orange} alt={orange} className="karta" />
-              <span className="ml-3 text-light">
+              <img src={orange} alt={orange} className="karta m4" />
+              <span className="ml-3 text-light m44">
                 Povoljno-potrebno vise parametara ispitivanja
               </span>
             </div>
           </div>
           <div className="row">
             <div className="col">
-              <img src={yellow} alt={yellow} className="karta mb-4" />
-              <span className="ml-3 text-light">
+              <img src={yellow} alt={yellow} className="karta mb-4 m4" />
+              <span className="ml-3 text-light m44">
                 Manje povoljno-potrebna puna ekspertiza svih parametara
               </span>
             </div>

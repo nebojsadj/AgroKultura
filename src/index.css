@@ -25,6 +25,10 @@
     color: #ccc;
 }
 
+.sizeCopy {
+    font-size: 11px;
+}
+
 .colorLink {
     color: #ccc;
 }
@@ -49,8 +53,35 @@
 
 .accordion {
     border: 2px solid rgb(105, 175, 105);
-    box-shadow: 0 0 9px rgb(105, 175, 105);
     border-radius: 10px;
+}
+
+.accordionCard {
+    border-radius: 10px;
+}
+
+.accFont {
+    font-size: 18px;
+}
+
+.slajd {
+    height: 400px;
+}
+
+.aboutImg {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.cardsImgs {
+    width: 100%;
+    height: 200px;
+}
+
+.cardFlex {
+    display: flex !important;
+    justify-content: space-around !important;
 }
 
 .drop {
@@ -120,9 +151,36 @@ use:hover {
 }
 
 .logoImg {
-    width: 200px;
-    height: 70px;
+    width: 300px;
+    height: 60px;
     /* margin-left: 2%; */
+}
+
+@media all and (max-width: 768px) {
+    .svgStyle {
+        width: 300px;
+        height: 500px;
+    }
+    .m3 {
+        width: 60px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .m33 {
+        margin-top: -100px;
+    }
+    .m44 {
+        font-size: 13px;
+    }
+    .mIcon {
+        width: 23px;
+        height: 23px;
+        margin-left: 0px;
+    }
+    .m4 {
+        width: 26px;
+        height: 36px;
+    }
 }
 
 @media all and (max-width: 576px) {

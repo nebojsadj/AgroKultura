@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./Data/imgs/agroLogo.png";
+import logo from "./Data/imgs/1.png";
 
 function Header() {
   return (

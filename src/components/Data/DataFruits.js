@@ -1,4 +1,5 @@
 export const jagoda = {
+    id: 1,
     name: "Jagoda",
     content: {
         uvod: `Jagoda je višegodišnja zeljasta biljka iz porodice ruža (Rosaceae). U plodu se nalazi oko 60 % vode,  može biti i do 12 % šećera kao i vitamina C od 24 - 97 mg %. Cveta više puta u godini i služe kao biljke indikatori za ispitivanje virusa.
@@ -41,6 +42,7 @@ export const jagoda = {
 };
 
 export const orah = {
+    id: 2,
     name: "Orah",
     content: {
         uvod: `Orah se može saditi u jesen ili u proleće, ipak, preporučuje se jesenja sadnja jer se sadnice tako bolje primaju, a kod njih je i bolji rast u prvoj godini od sadnje.
@@ -99,8 +101,9 @@ export const orah = {
     },
 };
 
-export const lesnik = {
-    name: "Lesnik",
+export const lešnik = {
+    id: 3,
+    name: "Lešnik",
     content: {
         uvod: `Leska je sredozemna kultura i izrazito heliofitna biljka. Vrlo je neobična voćna vrsta jer za razliku od drugih vrsta koje cvetaju u proleće, ona cveta zimi i to od decembra do marta. Koren joj raste i razvija se vrlo plitko, u sloju od oko 30 cm. Rese su muški cvetovi, a ženski su jedva vidljivi i imaju zrazito crvene tučkove. Divlje vrste leske sasvim dobro rastu uglavnom na proplancima i ivicama šuma, na lošim i siromašnim zemljištima. Životni vek leske je od 70 do 100 godina, a plod donosi od 50 do 70 godina. Počinje rađati u trećoj ili četvrtoj godini, a u pun rod dolazi sa sedam ili osam godina. U punom rodu jedno stablo daje od 8 do 12 kg, a od ploda oko 50% otpada na ljusku. Zavisno o uzgojnom obliku, gustini sadnje, vremenu starosti i drugih agrotehničkih mera, prinosi se kreću od 2,2 do 3,6 t/ha.
       `,
@@ -133,6 +136,7 @@ export const lesnik = {
 };
 
 export const badem = {
+    id: 4,
     name: "Badem",
     content: {
         uvod: `Badem predstavlja cenjeno, vrlo kalorično i hranjivo voće, kako na domaćem, tako i na inostranom tržištu. Plodovi sadrže kvalitetne masnoće, belančevine, ugljene hidrate, mineralne i aromatske materije kao i vitamine. Osim značajne upotrebe u domaćem kulinarstvu, značajna je njegova uloga i u prehrambenoj, farmaceutskoj, konditorskoj i kozmetičkoj industriji.
@@ -161,8 +165,9 @@ export const badem = {
     },
 };
 
-export const visnja = {
-    name: "Visnja",
+export const višnja = {
+    id: 5,
+    name: "Višnja",
     content: {
         uvod: `Višnja ima manju krošnju od trešnje i uglavnom raste kao žbunoliko stablo. Puno se proizvodi sorta oblačinska višnja pogodna za industrijsku preradu.  Najbolje uspeva na obroncima i blagim padinama okrenutim jugu, jugoistoku i istoku. Plod višnje je svetlocrvene ili tamnocrvene boje, slatkog ili kiselkastog ukusa. Spada u rano voće, koje se manje jede u svežem stanju, a više se industrijski prerađuje (sokovi, džemovi, rakija, vino, prelivi za konditorske proizvode, kompot itd.).`,
         h1: `Agroekološki uslovi za gajenje visnje`,
@@ -192,8 +197,9 @@ export const visnja = {
     },
 };
 
-export const tresnja = {
-    name: "Tresnja",
+export const trešnja = {
+    id: 6,
+    name: "Trešnja",
     content: {
         uvod: `Trešnja se gaji za potrošnju u svežem stanju, manji broj gaji se samo radi prerađevina (kompoti, džemovi, marmelade, sirovina za konditorsku industriju), a najmanje se gaje isključivo za proizvodnju likera ili rakija. Jednom ubrane trešnje više ne sazrevaju, pa se moraju brati zrele. Sveže su trešnje sjajne, pune i sa žarko zelenim peteljkama. Jako su praktične jer im osim pranja ne treba gotovo nikakva priprema i najbolje su sveže.  Početak pune rodnosti im je od 6 do 8 godine. Razlikujemo trešnje s mekanim mesom ploda i trešnje s čvrstim mesom ploda (hrskave). `,
         h1: `Agroekološki uslovi za gajenje tresnje`,
@@ -228,8 +234,9 @@ export const tresnja = {
     },
 };
 
-export const sljiva = {
-    name: "Sljiva",
+export const šljiva = {
+    id: 7,
+    name: "Šljiva",
     content: {
         uvod: `Šljiva raste kao srednje veliko stablo, manje ili više bujnog rasta. Pojedine sorte zahtevaju oprašivače, dok se neke oprašivaju same. Šljive donose plodove na dvogodišnjim ili trogodišnjim granama. Vreme cvetanja je u aprilu, pre listanja, a plodovi sazrevaju u avgustu, septembru i oktobru, zavisno od sortie. Ne zahtevaju redovno i obilno obrezivanje. Šljive su bogate vitaminima A i C. Spadaju u niskokalorično voće tako da se preporučuju u ishrani.`,
         h1: `Agroekološki uslovi za gajenje sljive`,
@@ -261,6 +268,7 @@ export const sljiva = {
 };
 
 export const breskva = {
+    id: 8,
     name: "Breskva",
     content: {
         uvod: `Breskva je jedna od najpopularnijih voćnih vrsta u svetu koja potiče iz Kine. Najveći obim proizvodnje breskve je u Evropi gde su Italija, Grčka, Španija i Francuska najveći proizvođači.
@@ -294,6 +302,7 @@ export const breskva = {
 };
 
 export const malina = {
+    id: 9,
     name: "Malina",
     content: {
         uvod: `Malina je zeljasta biljka niskog rasta iz porodice ruža (Rosaceae). Rodi odmah posle sadnje, a punu rodnost dostiže u trećoj godini. Rodi jednom ili više puta godišnje. Živi u proseku 8-14 godina, a može dostići starost i do 20 godina. Raste u obliku žbuna visine i do 3,5 m.
@@ -324,6 +333,7 @@ export const malina = {
 };
 
 export const kupina = {
+    id: 10,
     name: "Kupina",
     content: {
         uvod: `Kupina je biljka puzavica iz porodice ruža (Rosaceae). Ona naraste od 50-300 cm. Stabljika joj je, manje-više bodljikava zavisno od sorte i mestimično odrvenela. Bodlje služe za penjanje, ali i kao odbrambeni mehanizam protiv životinja koje se hrane lišćem kupine. Cveta od juna do avgusta. Nakon cvetanja iz svakog pojedinog cveta razvija se sitni jagodičasti plod, crvene boje, koji kasnije potamni do tamnoplave i gotovo crne boje. `,
@@ -351,11 +361,11 @@ export const kupina = {
 };
 
 export const jabuka = {
+    id: 11,
     name: "Jabuka",
     content: {
         uvod: `Jabuka je temelj voćarske proizvodnje i služi kao osnovica za upoređivanje isplativosti gajenja drugih voćaka. Njeni plodovi sazrevaju od najranijeg leta sve do zime. Plodovi zimskih sorata jabuka najcenjeniji su jer postižu najbolji kvalitet, a i sezona potrošnje im je zimi kada nema velikog izbora drugih vrsta voća. To voće ima gotovo sve što je potrebno ljudskom organizmu: voćne šećere i voćne kiseline, vitamine, minerale, pektine i sasvim čistu vodu.  `,
         h1: `Agroekološki uslovi za gajenje jabuke`,
-
         h2: `Temperatura`,
         p2: `Jabuka zahteva srednje prosečne temperature vazduha u vegetaciji 14 - 19 °C. Podnosi vrlo niske temperature vazduha od -25 do -28 °C (bez težih posledica) u vreme dubokog zimskog mirovanja kao i apsolutne maksimalne temperature do 35 °C (bez težih posledica, ali zavisno o relativnoj vlazi vazduha i vlazi zemljišta). Pogoduje joj umjerena relativna vlažnost vazduha do 60 % i blaga strujanja u doba povećane vlažnosti vazduha ili jakih letnjih žega, ali joj štete topli i suvi vetrovi u vreme oplodnje. Osetljiva je na grad u svako doba vegetacije ali ne i snežni pokrivač u doba velikih hladnoća (pokriveno zemljište sprečava smrzavanje korenja).
       `,
@@ -400,15 +410,14 @@ export const jabuka = {
     },
 };
 
-export const kruska = {
-    name: "Kruska",
-    img: "Slika",
+export const kruška = {
+    id: 12,
+    name: "Kruška",
     content: {
         uvod: `Kruške pripadaju porodici ruža (Rosaceae) i srodne su jabukama i dunjama. S obzirom na to da postoji oko hiljadu sorti, razlikujemo ih po veličini, obliku, boji, ukusu kao i dužini skladištenja. Dobar su izvor dijetalnih vlakana koja lekovito deluju najpre na zdravlje sistema za varenje, a zatim i kardiovaskularnog sistema.
       Gaje se na plantažama, u vrtovima i voćnjacima, a u divljem obliku rastu u šumama. Cvetanje kruške traje 20 dana, od aprila do maja. U tom vremenu cvetovi daju obilje nektara i polena.
       `,
         h1: `Agroekološki uslovi za gajenje kruske`,
-
         h2: `Temperatura`,
         p2: `Kruška cveta pre jabuke pa je mogućnost proletnjeg izmrzavanja znatno veća, a osim toga, osetljivija je na apsolutne temperaturne minimume zimi. U samom cvetanju temperature od -1 °C mogu potpuno uništiti rod jer je to najosetljivija fenološka faza. Kada prođe faza punog cvetanja, tj. kad su kruške u fazi zametanja pupoljaka, temperatura od -1 °C neće potpuno uništiti rod, ali će takvi plodovi imati znatno nižu tržišnu vrednost jer su vrlo često nepravilni (krompirasti) i po pravilu imaju smeđi pojas od mraza. Tokom vegetacije kruška može podneti temperaturu i do 34 °C.
       `,
@@ -424,16 +433,16 @@ export const kruska = {
         h6: `Izbor podloga `,
         p6: `Sve sorte krušaka nemaju zadovoljavajuću kompatibilnost s dunjom, pa se one moraju kalemiti s međupodlogom. Kruška se može kalemiti na divlju krušku i na različite tipove dunje. Na podlozi divlje kruške manje je osetljiva na lošija zemljišta, ali su stabla bujnija, a i plodovi su znatno lošijeg kvaliteta. Kao podloga koriste se tipovi dunje: EMA, EMC, BA 29, Adam's, Sydo i OHF 333. Prednost bi trebalo dati podlogama EMA i BA 29. Sorte loše kompatibilnosti s dunjom (npr. Viljemovka) obvezno treba kalemiti s međupodlogom. Kao međupodloga mogu poslužiti sorte General Lekler, Poire de cure i Hardenpontova.
       `,
-        h7: `Izbor sorata kruske`,
+        h7: `Izbor sorata kruške`,
         p7: `Odabir sorte zavisi od ekoloških uslova i mogućnosti plasmana. Rane sorte mogu se uzgajati u svim područjima pogodnim za krušku, ali prednost se daje onim područjima gde je veća mogućnost plasmana da bi se izbegao nepotreban i skup prevoz. Osim toga, najranije sorte su i najosetljivije na prevoz, a i vek skladištenja im je najkraći. Kasne zimske sorte zahtievaju dovoljno sunčanih dana da bi mogle postići visok kvalitet plodova, pa se mogu uzgajati samo u toplim krajevima. Pri tome posebnu pažnju treba posvetiti navodnjavanju jer su to krajevi gde tokom leta obično vlada suša. Sorte srednjeg doba sazrevanja mogu se uzgajati na povoljnim lokacijama svih naših područja, a jedini ograničavajući činilac jeste mogućnost plasmana.
       `,
-        h8: `Izbor uzgojnog oblika kruske `,
+        h8: `Izbor uzgojnog oblika kruške `,
         p8: `Razmak između redova zavisi o bujnosti podloge i sorte, ali za suvremene uzgojne oblike, uz dobru voćarsku mehanizaciju, taj razmak ne treba biti veći od 3,2 m. Razmak u redu zavisi od sorti, ali u načelu može se reći da je za većinu sorata dovoljno 1,2 do 1,5 m. Sve to odnosi se na uzgojni oblik, a kod kruške su najčešći vitki vretenasti žbun i vitko vreteno.
       `,
         h9: `Vreme i tehnika sadnje `,
         p9: `Iskopa se rupa za sadnicu. Sadnicu se postavlja 3-5 cm daleko od koca. Na koren se stavlja sloj rastresitog zemljišta, debljine 5 - 8 cm koji se dobro nagazi. Potom se stavi 20 - 30 kg zrelog stajnjaka. Na njega se stavlja zemlja pa se oko voćke oblikuje čanak za bolje zadržavanja vode. Dubina sadnje je kao u rasadniku, tj. spojen mesto je barem 10 cm iznad nivoa zemljišta.
       `,
-        h10: `Održavanje zasada kruske`,
+        h10: `Održavanje zasada kruške`,
         p10: `Međuredni prostor se zatravi, kosi se 6 - 8 puta u vegetaciji a u redu se primenjuju herbicida. Ako u voćnjaku nema sistem za navodnjavanje zemljište se održava stalnom međurednom obradom.
       `,
         h11: `Djubrenje`,
@@ -444,14 +453,13 @@ export const kruska = {
 };
 
 export const dunja = {
+    id: 13,
     name: "Dunja",
-    img: "Slika",
     content: {
         uvod: `Dunja kasno cveta (krajem aprila ili početkom maja) i zato vrlo retko strada od kasnih prolećnih mrazeva, pa gotovo svake godine obilno i redovno rađa (što nije slučaj s većinom voćnih kultura).
       Osim izvanredno zdravog, hranjivog i ukusnog soka, od dunje se može pripremiti velik broj slatkih prerađevina, počevši od džemova, marmelada, kompota, želea, ukusnog likera, dunja u vinu ili rumu do rakije dunjevače.
       `,
         h1: `Agroekološki uslovi za gajenje dunje`,
-
         h2: `Temperatura`,
         p2: `Dunji su potrebna vrlo topla leta, suvi vazduh tokom leta kao i zime bez većeg kolebanja između visokih i niskih temperatura. Tokom zimskog mirovanja dunja može podneti kraće vreme temperature do -30 °C, a leti čak 52 °C. S obzirom na to da je dunja voće toplijeg podneblja, najbolje raste i donosi plodove u uslovima sredozemne i umereno kontinentalne klime, sa srednjom godišnjom temperaturom između 10° i 15 °C. Za razliku od kruške i jabuke, dunja slabije podnosi zimske temperature, pogotovo pred završetak vegetacije u jesen i na početku vegetacije u proleće, pa se može dogoditi da posle toplog januara, a pogotovo ako se toplo vreme zadrži i tokom februara, smrzne u martu na temperaturi -20 °C. Mladi plodovi smrzavaju na -2 °C.
       `,
@@ -491,14 +499,12 @@ export const dunja = {
 };
 
 export const kajsija = {
+    id: 14,
     name: "Kajsija",
-    img: < img src = "Data/imgs/kajsijaImg.jpg"
-    alt = "img" / > ,
     content: {
         uvod: `Kajsija (Prunus armeniaca L. ili Armeniaca vulgaris L.) potiče iz severoistočne Kine, odakle se proširila dalje u svet. Stabla kajsije dospevaju u rod nakon 3 - 4 godine i na pažljivo odabranim terenima redovno rađaju. Otpornija je na biljne bolesti i štetočine od većine drugih voćnih vrsta pa joj je zaštita jeftinija.
       Plodovi rano sazrevaju (jun, jul) i na tržištu postižu visoku cenu. Bogati su šećerima, organskim kiselinama, vitaminima i mineralnim materijema. Kajsija se bere od kraja juna do kraja jula. Najčešće je to ručna berba. Sveži plodovi kajsije cenjeni su kao stono voće, a i kao sirovina za preradu u raznovrsne prerađevine (sokove, džemove, pekmeze, kompote itd.). Osim toga, plodovi se suše, a i prerađuju u rakiju izvarednog kvaliteta.`,
         h1: `Agroekološki uslovi za gajenje kajsije`,
-
         h2: `Temperatura`,
         p2: `Tokom dubokog zimskog mirovanja, kajsija može izdržati i do -25 °C s manjim oštećenjem, dok u vreme ekološkog zimskog mirovanja temperature od -18 °C mogu prouzrokovati velike štete. Razdoblje od desetak toplijih dana, nakon zimskog mirovanja, može izazvati kretanje sokova u voćki. Usledi li naglo zahlađenje nakon toga, dolazi do smrzavanja ćeliskog soka u provodnim tkivima voćke, što može biti vrlo štetno kao i uzrokovati potpuno smrzavanje stabla. Kajsija vrlo rano cveta jer joj je za cvetanje dovoljna mala suma aktivnih temperatura (iznad 7 °C). Kajsija cveta ranije od svih voćaka (osim nekih sorata badema), pa često zbog kasnih prolećnih mrazeva u cvetanju ili nakon oplodnje izmrznu cvetovi ili tek zametnuti plodovi. Najosetljiviji su mladi plodovi jer sadrže najviše vode. Kritična temperatura za njih je od 0 °C pa do -2 °C što zavisi od sorte i vremena trajanja hladnoće. Cvetovi podnose nešto nižu temperaturu od mladih plodova. Temperature od -1,1 °C do -5,5 °C, zavisno od sorata i trajanja hladnoće, mogu prouzrokovati izmrzavanje cvetova kajsije. Kvalitetniji plodovi se proizvode u područjima sa srednjom dnevnom temperaturom u junu od 19 °C, a u julu od 20 °C.
       `,
@@ -523,5 +529,87 @@ export const kajsija = {
         h9: `Vreme i tehnika sadnje kajsije`,
         p9: `Sadnju kajsije treba obaviti u jesen da bi se omogućilo bolje ukorjenjivanje tokom jeseni, zime i proleća, ili ranije u proleće, da bi se u većoj meri iskoristila rezerva zimske vlage u zemljištu radi što boljeg ukorenjavanja sadnica kajsije. Na koren se stavlja sloj rastresite zemlje, koju je potrebno dobro ugaziti, kao i 20 kg stajskog đubriva i 0,5 kg NPK 7:20:30, u sloju iznad korenja. Sva dodana đubriva prekriju sa zemljom, a voćka se zalije s najmanje 30 litara vode. Razmak sadnje iznosi 5 - 8 m između redova i 4 - 7 m u redu.
       `,
+    },
+};
+
+export const borovnica = {
+    id: 15,
+    name: "Borovnica",
+    content: {
+        uvod: `Borovnica je listopadni žbun iz porodice Vresova (Ericaceae), prosečne visine od 20 - 50 cm. Raširena je u borovim, smrekovim i bukovim šumama. Cveta u maju i junu, a sazreva u avgustu, pa i u septembru. Plod je okrugla bobica, prečnika 5 - 10 mm, tamno plave boje, debele pokožice i kiselkasto-slatkog je ukusa. Sadrži organske kiseline, mineralne materije, tanin i boje. 
+        `,
+        h1: `Agroekološki uslovi za gajenje borovnice`,
+        h2: `Temperatura`,
+        p2: `Borovnica je otporna na zimu i može podneti temperature od -20 °C do -25 °C bez ikakvih šteta, a ako je prekrivena snegom može izdržati i puno niže temperature.`,
+        h3: `Voda`,
+        p3: `U vreme vegetacije borovnica traži dosta vlage pa se leti, kada su temperature dosta visoke, a zemljište nije vlažno, mora navodnjavati. Borovnica ima dosta plitak koren i zbog toga je jako osetljiva na sušu, pa ukoliko joj ne osiguramo dovoljno vlage može doći do ozbiljnih šteta u zasadu, kao što su kržljav rast, slabiji rod, a u najgorem slučaju žbunovi se mogu osušiti. `,
+        h4: `Zemljište`,
+        p4: `Dobro uspeva na svakom kiselom zemljištu (pH 4 - 5,2). Na krečnom zemljištu uspeva samo ako postoji dovoljno dubok sloj kiselog humusa.  `,
+        h5: `Izbor položaja za podizanje zasada borovnice`,
+        p5: `Odgovaraju joj topliji i osunčani položaji. Za podizanja zasada najbolja su zemljišta s blagim nagibom kako bi se odvijala stalna cirkulacija vazduha.
+        `,
+        h6: `Priprema zemljišta za sadnju borovnice`,
+        p6: `Pre sadnje, zemljište treba obraditi do dubine od 20 cm. Ako je zemljište vlažno, prave se jamići visine 15 - 30 cm i širine 120 cm. U svaku rupu pre sadnje dodati đubrivo, ali ne ona koja sadrže kalcijum ili kreč. To je rezlog što propada borovnica posađena uz zidove i ograde s kojih kreč ulazi u zemljište.`,
+        h7: `Podizanje zasada borovnice`,
+        p7: `Razmnožava se podzemnim izdancima iz korena. Pre sadnje, s korena se uklanja suvišno zemljište u kojem se sadnica nalazila u rasadniku. Sadi se tokom oktobra i novembra. Nekoliko sati pre sadnje koren se potapa u vodu. Standardni razmaci za visokožbunastu borovnicu su 120 cm u redu i 3 m između redova. Borovnica se uglavnom gaji u obliku žbuna i žive ograde. Na većim visinama preporučljivo je da smer redova bude sever-jug zbog optimalne količine svetlosti, dok u nižim, toplim i dobro osvijetljenim ploložajima prednost se daje smeru istok-zapad kako bi se smanjilo preterano zagrevanje i isušivanje zemljišta, a i biljka je tada manje osetljiva na mraz.`,
+        h8: `Održavanje zasada borovnice`,
+        p8: `Ako je zemljište obezbeđeno fosforom koristi se formulacija NPK đubriva u odnosu 12:4:8, a ako nije, onda je odnos 10:10:10. Dodaje se 30 g po žbunu u proleće posle pupljenja i u jesen nakon berbe. Količina đubriva postepeno se povećava do 150 g po žbunu koji dostigne visinu od 2,5 m. Prve godine posle sadnje ne primenjuju se azotna đubriva zbog osetljivosti korena borovnice. Druge se godine može dodati i UREA. Ako nastane suša, zasad se mora redovno zalivati, a navodnjavanje mladih zasada je neophodno.
+        Prve godine nakon sadnje uklanjaju se cvetni pupoljci. Kada biljke dostignu visinu od 1 - 1,5 m, vrši se rezdba u svrhu obnavljanja rodnih grana. Prvo se potpuno uklanjaju stare, slabe i obolele grane. S preostalih grana orezuju se grane izrasle tokom zadnje dve godine i koje je donelo rod. Novi izdanci pojaviće se ispod orezanog mesta.`,
+    },
+};
+
+export const ogrozd = {
+    id: 16,
+    name: "Ogrozd",
+    content: {
+        uvod: `Ogrozd je vrsta voća iz roda ribizli (Ribes). To je žbun srednjeg rasta koji počinje da rađa druge godine, a punu rodnost daje u periodu od  5 do 8 godine. U proseku živi oko 15 godina, ali može doživeti i 20.`,
+        h1: `Agroekološki uslovi`,
+        h2: `Temperatura`,
+        p2: `Ogrozd je otporan je na niske temperature. U vreme dubokog zimskog mirovanja izdrži i do -25 °C, a izmrzava na -35 °C. Ipak, ne pogoduju mu nagla zahlađenja u vreme cvetanja jer mogu dovesti do smanjenja roda i do formiranja sitnijih plodova. Osetljiv je i na letnje visoke temperature kada se javljaju ožegotine na lišću. `,
+        h3: `Voda`,
+        p3: `Ogrozdu je dovoljno 800 mm padavina u godini ali pravilno raspoređenih što se može postići i određenim sistemom navodnjavanja. `,
+        h4: `Zemljište`,
+        p4: `Ogrozd daje dobre proizvodne rezultate ako je uzgojen na težem, ilovasto-peskovitom zemljištu koje je umereno vlažno i hladno i u kojem se ne zadržava voda. Ne podnosi peskovita i jako topla zemljišta. `,
+        h5: `Izbor položaja za podizanje zasada `,
+        p5: `Najpovoljniji su zasenjeni položaji izloženi cirkulaciji vazduha i zaštićeni od jakih vetrova.`,
+        h6: `Priprema zemljišta za sadnju`,
+        p6: `Zemljište za gajenje ogrozda treba biti dobro drenirano, nezakorovljeno i obrađeno barem 40 cm duboko. Zaorava se 500 kg/ha NPK đubriva u odnosu 7:20:30. Nakon dubljeg zaoravanja mineralnih đubriva unosi se i pliće zaorava 10 t stajskog đubriva.`,
+        h7: `Razmnožavanje`,
+        p7: `Ogrozd se može razmnožavati semenom, zrelim ili zelenim reznicama i položenicama. Ožiljeni izdanci ili reznice bi trebalo da budu do dve godine u rasadniku pre nego se posade u plantažne zasade.`,
+        h8: `Sadni materijal`,
+        p8: `Kako bi se postiglo dobro ožiljavanje, trebalo bi izabrati odrvenjene jednogodišnje izdanke i odvojiti ih od matične biljke u jesen pre nego što opadne lišće. Reznice se skrate na 30 cm i sade duboko u brazde ili jarke na razmaku 0,6-0,75 m između redova i 8-15 cm u redu. Pupoljci i trnje se u donjem delu uklanjaju, a ostavlja se 4-5 vršnih pupoljaka.`,
+        h9: `Podizanje zasada`,
+        p9: `Sadi se u jesen ili, ako je vreme pogodno, zimi, a naročito u proleće. Sade se ožiljeni izdanci ili reznice, stare dve ili tri godine ili jednogodišnje, ako su razvijene. Sade se nešto dublje no što su bili nagrnuti zbog ožiljavanja. Posle sadnje izdanci se orežu na 3-5 okaca. Na jako osunčanim mestima ogrozd se sadi kao međukultura ili se u njegov zasad posadi nekoliko redova voćaka radi sjene. Ogrozd se može uzgajati u obliku žbuna, kordunica ili žive ograde (špalira). Najčešće se gaji u obliku žbuna na razmaku 1,3-1,5 ili 2-3 m.`,
+        h10: `Održavanje zasada`,
+        p10: `Obrada zemljišta sastoji se od uništavanja korova i razbijanja pokorice 4-5 puta godišnje. Navodnjavanjem se zemljište održava vlažnim i hladnim. Zasad se nasipa organskim materijalima u obliku malčevanja raznih vrsta u sloju od 12-15 cm. Đubri se prema rezultatima analize zemljišta i lista, sa 250-30 kg azotnih i kalijumovih đubriva i 300-400 kg fosfornih đubriva. Svake druge do treće godine dodaje se 30-60 t stajskog đubriva ili se zaoravaju biljke za zelenišno đubrenje. Đubrenje kalijumom treba biti pojačano jer je ogrozd osetljiv na njegov nedostatak.
+        Rezidba se sastoji od skraćivanja razvijenih letorasta na polovinu ili trećinu dužine, uklanjaju se slabo razvijene, stare i zakržljale grane kao i one koje su slabo rodne. Na žbunu se ostavi 6-8 grana, starih 3-6 godina s više rodnih grančica koje daju glavni rod, a žive prosečno 2-4 godine.`,
+    },
+};
+
+export const ribizla = {
+    id: 17,
+    name: "Ribizla",
+    content: {
+        h1: `Način gajenja ribizle`,
+        p2: `Najčešći sistem gajenja ribizle je u jednoredu u neprekidnom nizu bez naslona, a pojedinačne biljke u obliku žbuna.
+        Optimalno rastojanje u zasadu je 2,5 m između redova i 1 m u redu između biljaka (2,5×1 m) odnosno 4.000 biljaka po hektaru. Time se obezbeđuje maksimalno korišćenje životnog prostora, dobar i nesmetan prolaz mehanizacije, a pri ovakvom sklopu biljaka postižu se maksimalni prinosi po hektaru (preko 20 tona). `,
+        h3: `Sadnja ribizle `,
+        p3: `Sadnja se može obavljati u jesen od otpadanja lišca pa do kretanja vegetacije u proleće. U principu daleko je bolja jesenja sadnja s obzirom na rano kretanje vegetacije ove voćke. Za sadnju se kopaju rupe dimenzija 40×40 cm.
+        Pre sadnje treba izvršiti pripremu sadnice tako što se ona pregleda, sa nje odstrane polomljene i oštećene žile i oštećeni nadzemni delovi. Zatim se žile skraćuju na dužinu 10 do 15 cm a ako su kraće samo im se obnovi rez.
+        Sadnica se stavlja u neposredno pre sadnje otvorene rupe, nekoliko cm (3 do 5) dublje nego što je bila u rasadniku, zatim se prodrma da zemlja zađe oko žila i lagano nagazi. Potom se vrati ostatak zemlje i oko sadnice napravi ravnina oblika činije za zadržavanje vode. Nastojati da sadnica stoji uspravno.
+        Po završenoj sadnji dodati oko svake sadnice po 100 do 120 g (jedna šaka) kompleksnog mineralnog dubriva NPK 10:12:26 ili 8:16:24. Pri prolećnoj sadnji obavezno je zalivanje sa 3 do 5 l vode po sadnici. 
+        `,
+        h4: `Nega zasada u podizanju `,
+        p4: `Rano u proleće po otapanju snega izvršiti prvo plitko prašenje izmedu redova, a u redu pažljivo plevljenje korova. Tokom leta, obaviti nekoliko prašenja i plevljenja korova (3 do 4) kako bi se zasad normalno razvijao. Upotreba herbicida se ne preporučuje.
+        Pre drugog prašenja, a po prijemu sadnica treba razbaciti po zasadu oko 150 kg prihranskog azotnog dubriva KAN (oko 50 g po sadnici) ili amonijumsulfata. Ovo se može izvesti i u dva navrata sa po polovinom doze.
+        Prekraćivanje (rezidba) posađenih sadnica ribizle obavlja se rano u proleće po otapanju snega i prvog prašenja, a u svakom slučaju pre kretanja vegetacije. Sadnice se skraćuju na 3 do 4 vidljiva pupoljka.
+        Zaštitna prskanja (3 do 4) sprovode se prema potrebi. 
+        U toku prve godine u međurednom prostoru preporučuje se gajenje pasulja čučavca, graška, industrijske boranije i sl. a nije dozvoljeno gajenje krompira, jagode, kukuruza i sl. 
+        U slučaju izražene suše potrebno je izvršiti navodnjavanje sa količinom od 5 do 10 l vode po jednoj biljci što zavisi od stepena suše i spoljnih temperatura.
+        Na kraju prve godine nege zasada treba izvršiti dubrenje osnovnim kompleksnim mineralnim dubrivom NPK 10:12:26 + 3% MgO (“Krtolin”) u količini 400 do 500 kg/ha, odnosno oko 100 do 120 g po biljci. Vreme primene uskladiti sa spoljnim uslovima. Rasturanje se može obaviti i kad je sneg manji do 10 cm pod uslovom da je moguće kretanje po njemu.
+        Nega ribizle u drugoj i trećoj godini posle sadnje slična je kao i u prvoj godini uz veći utrošak radne snage, dubriva i hemijskih sredstava saglasno razvijenosti žbunova. 
+        Na kraju treće, odnosno, na početku četvrte godine na dobro razvijenom žbunu ribizle treba da ima 5-6 jednogodišnjih, 5-6 dvogodišnjih i 4-5 trogodišnjih grana.
+        U trećoj godini očekuju se prvi prinosi od po 1 do 1,2 kg po žbunu, što iznosi 4 do 5 t/ha. 
+        `,
     },
 };

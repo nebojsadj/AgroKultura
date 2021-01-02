@@ -40,7 +40,7 @@ function Footer() {
           </ul>
         </div>
         <div className="col p-3">
-          <h5 className="text-white">Agro kultura platforma</h5>
+          <h5 className="text-white">AGRONOM S platforma</h5>
           <ul className="list-unstyled mt-3">
             <li className="colorFooter">
               Nas cilj je pametno ulaganje, planska sadnja i veliki prinos. Tu
@@ -54,8 +54,8 @@ function Footer() {
       </div>
       <div className="row mt-3">
         <div className="col">
-          <p className="text-center colorFooter">
-            &copy;{new Date().getFullYear()} AgroKultura
+          <p className="text-center sizeCopy colorFooter">
+            &copy;{new Date().getFullYear()} AGRONOM S
           </p>
         </div>
       </div>

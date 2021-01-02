@@ -3,36 +3,6 @@ import { data } from "./Data/DataCity";
 import svg from "./Data/serbia.svg";
 import { Dropdown, Modal } from "react-bootstrap";
 import { GiShinyApple, GiStrawberry, GiCherry, GiAlmond } from "react-icons/gi";
-import Beograd from "./Data/imgs/Beograd.jpg";
-import Bor from "./Data/imgs/Bor.jpg";
-import Cacak from "./Data/imgs/Cacak.jpg";
-import Gnjilane from "./Data/imgs/Gnjilane.jpg";
-import Kikinda from "./Data/imgs/Kikinda.jpg";
-import KosovskaMitrovica from "./Data/imgs/KosovskaMitrovica.jpg";
-import Kragujevac from "./Data/imgs/Kragujevac.jpg";
-import Kraljevo from "./Data/imgs/Kraljevo.jpg";
-import Krusevac from "./Data/imgs/Krusevac.jpg";
-import Leskovac from "./Data/imgs/Leskovac.jpg";
-import Nis from "./Data/imgs/Nis.jfif";
-import NoviSad from "./Data/imgs/NoviSad.jpg";
-import Pancevo from "./Data/imgs/Pancevo.png";
-import Pec from "./Data/imgs/Pec.jpg";
-import Pirot from "./Data/imgs/Pirot.jpg";
-import Pozarevac from "./Data/imgs/Pozarevac.png";
-import Pristina from "./Data/imgs/Pristina.jpg";
-import Prizren from "./Data/imgs/Prizren.jpg";
-import Prokuplje from "./Data/imgs/Prokuplje.jpg";
-import Sabac from "./Data/imgs/Sabac.jpg";
-import Smederevo from "./Data/imgs/Smederevo.jpg";
-import Sombor from "./Data/imgs/Sombor.jpg";
-import SremskaMitrovica from "./Data/imgs/SremskaMitrovica.jpg";
-import Subotica from "./Data/imgs/Subotica.jpg";
-import Uzice from "./Data/imgs/Uzice.jpg";
-import Valjevo from "./Data/imgs/Valjevo.jpg";
-import Vranje from "./Data/imgs/Vranje.jpg";
-import Zajecar from "./Data/imgs/Zajecar.jpg";
-import Zrenjanin from "./Data/imgs/Zrenjanin.jpg";
-
 import kajsijaImg from "./Data/imgs/kajsijaImg.jpg";
 import bademImg from "./Data/imgs/bademImg.jpg";
 import breskvaImg from "./Data/imgs/breskvaImg.jpg";
@@ -47,23 +17,29 @@ import orahImg from "./Data/imgs/orahImg.jpg";
 import sljivaImg from "./Data/imgs/sljivaImg.jpg";
 import tresnjaImg from "./Data/imgs/tresnjaImg.jpg";
 import visnjaImg from "./Data/imgs/visnjaImg.jpg";
+import borovnicaImg from "./Data/imgs/borovnicaImg.jpg";
+import ogrozdImg from "./Data/imgs/ogrozdImg.jpg";
+import ribizlaImg from "./Data/imgs/ribizlaImg.jpg";
+import ColorsInDistricts from "./ColorsInDistricts";
 import {
   jagoda,
   orah,
-  lesnik,
+  lešnik,
   badem,
-  visnja,
-  tresnja,
-  sljiva,
+  višnja,
+  trešnja,
+  šljiva,
   breskva,
   malina,
   kupina,
   jabuka,
-  kruska,
+  kruška,
   dunja,
   kajsija,
+  borovnica,
+  ogrozd,
+  ribizla,
 } from "./Data/DataFruits";
-import ColorsInDistricts from "./ColorsInDistricts";
 
 function Home() {
   const [centers, setCenters] = useState({
@@ -71,11 +47,10 @@ function Home() {
     orange: [],
     yellow: [],
   });
-  const [show, setShow] = useState(false);
-  const [modal, setModal] = useState(false);
+  const [district, setDistrict] = useState(false);
+  const [fruit, setFruit] = useState(jagoda);
   const [title, setTitle] = useState("Izaberite okrug");
   const [showModal, setShowModal] = useState(false);
-  const [fruit, setFruit] = useState(jagoda);
 
   const mark = (option) => {
     const red = data.filter((el) => el.isRed.includes(option));
@@ -84,10 +59,10 @@ function Home() {
     setCenters({ red: red, orange: orange, yellow: yellow });
   };
 
-  const forModal = (name) => {
-    setFruit(name);
-    setShowModal(true);
-  };
+  const jabucasto = [jabuka, kruška, dunja];
+  const jagodasto = [jagoda, malina, kupina, borovnica, ogrozd, ribizla];
+  const kosticavo = [breskva, kajsija, trešnja, višnja, šljiva];
+  const jezgrasto = [orah, lešnik, badem];
 
   const pictFruit = () => {
     switch (fruit.name) {
@@ -103,11 +78,11 @@ function Home() {
         return jagodaImg;
       case "Kajsija":
         return kajsijaImg;
-      case "Kruska":
+      case "Kruška":
         return kruskaImg;
       case "Kupina":
         return kupinaImg;
-      case "Lesnik":
+      case "Lešnik":
         return leskaImg;
       case "Malina":
         return malinaImg;
@@ -115,77 +90,18 @@ function Home() {
         return orahImg;
       case "Sljiva":
         return sljivaImg;
-      case "Tresnja":
+      case "Trešnja":
         return tresnjaImg;
-      case "Visnja":
+      case "Višnja":
         return visnjaImg;
+      case "Borovnica":
+        return borovnicaImg;
+      case "Ogrozd":
+        return ogrozdImg;
+      case "Ribizla":
+        return ribizlaImg;
       default:
         return bademImg;
-    }
-  };
-
-  const pictCity = () => {
-    switch (modal.city) {
-      case "Beograd":
-        return Beograd;
-      case "Bor":
-        return Bor;
-      case "Cacak":
-        return Cacak;
-      case "Gnjilane":
-        return Gnjilane;
-      case "Kikinda":
-        return Kikinda;
-      case "KosovskaMitrovica":
-        return KosovskaMitrovica;
-      case "Kragujevac":
-        return Kragujevac;
-      case "Kraljevo":
-        return Kraljevo;
-      case "Krusevac":
-        return Krusevac;
-      case "Leskovac":
-        return Leskovac;
-      case "Nis":
-        return Nis;
-      case "NoviSad":
-        return NoviSad;
-      case "Pancevo":
-        return Pancevo;
-      case "Pec":
-        return Pec;
-      case "Pirot":
-        return Pirot;
-      case "Pozarevac":
-        return Pozarevac;
-      case "Pristina":
-        return Pristina;
-      case "Prizren":
-        return Prizren;
-      case "Prokuplje":
-        return Prokuplje;
-      case "Sabac":
-        return Sabac;
-      case "Smederevo":
-        return Smederevo;
-      case "Sombor":
-        return Sombor;
-      case "SremskaMitrovica":
-        return SremskaMitrovica;
-      case "Subotica":
-        return Subotica;
-      case "Uzice":
-        return Uzice;
-      case "Valjevo":
-        return Valjevo;
-      case "Vranje":
-        return Vranje;
-      case "Zajecar":
-        return Zajecar;
-      case "Zrenjanin":
-        return Zrenjanin;
-      default:
-        return Beograd;
     }
   };
 
@@ -197,7 +113,7 @@ function Home() {
             <Dropdown style={{ marginLeft: "55%" }}>
               <Dropdown.Toggle
                 variant="light"
-                className=" m3"
+                className="m3"
                 id="dropdown-basic"
               >
                 <GiShinyApple
@@ -205,42 +121,26 @@ function Home() {
                   className="mIcon"
                   style={{ color: "#2db300" }}
                 />{" "}
-                jabucasto
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("jabuka");
-                    forModal(jabuka);
-                  }}
-                  className="bgItem"
-                >
-                  Jabuka
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("kruska");
-                    forModal(kruska);
-                  }}
-                  className="bgItem"
-                >
-                  Kruska
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("dunja");
-                    forModal(dunja);
-                  }}
-                  className="bgItem"
-                >
-                  Dunja
-                </Dropdown.Item>
+                {jabucasto.map((el) => (
+                  <Dropdown.Item
+                    key={el.id}
+                    onClick={() => {
+                      mark(el.name.toLowerCase());
+                      setFruit(el);
+                    }}
+                    className="bgItem"
+                  >
+                    {el.name}
+                  </Dropdown.Item>
+                ))}
               </Dropdown.Menu>
             </Dropdown>
             <Dropdown style={{ marginTop: "500px", marginLeft: "55%" }}>
               <Dropdown.Toggle
                 variant="light"
-                className="m3"
+                className="m3 m33"
                 id="dropdown-basic"
               >
                 <GiStrawberry
@@ -248,63 +148,20 @@ function Home() {
                   className="mIcon"
                   style={{ color: "#ff0000" }}
                 />{" "}
-                jagodasto
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("jagoda");
-                    forModal(jagoda);
-                  }}
-                  className="bgItem"
-                >
-                  Jagoda
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("malina");
-                    forModal(malina);
-                  }}
-                  className="bgItem"
-                >
-                  Malina
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("kupina");
-                    forModal(kupina);
-                  }}
-                  className="bgItem"
-                >
-                  Kupina
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("borovnica");
-                    // forModal(borovnica);
-                  }}
-                  className="bgItem"
-                >
-                  Borovnica
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("ogrozd");
-                    // forModal(ogrozd);
-                  }}
-                  className="bgItem"
-                >
-                  Ogrozd
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("ribizla");
-                    // forModal(ribizla);
-                  }}
-                  className="bgItem"
-                >
-                  Ribizla
-                </Dropdown.Item>
+                {jagodasto.map((el) => (
+                  <Dropdown.Item
+                    key={el.id}
+                    onClick={() => {
+                      mark(el.name.toLowerCase());
+                      setFruit(el);
+                    }}
+                    className="bgItem"
+                  >
+                    {el.name}
+                  </Dropdown.Item>
+                ))}
               </Dropdown.Menu>
             </Dropdown>
           </div>
@@ -329,8 +186,8 @@ function Home() {
                     onClick={
                       centers.orange.length > 0
                         ? () => {
-                            setShow(true);
-                            setModal(location);
+                            setDistrict(location);
+                            setShowModal(true);
                           }
                         : null
                     }
@@ -364,60 +221,27 @@ function Home() {
                   className="mIcon"
                   style={{ color: "#990000" }}
                 />{" "}
-                kosticavo
+                {/* kosticavo */}
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("breskva");
-                    forModal(breskva);
-                  }}
-                  className="bgItem"
-                >
-                  Breskva
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("kajsija");
-                    forModal(kajsija);
-                  }}
-                  className="bgItem"
-                >
-                  Kajsija
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("tresnja");
-                    forModal(tresnja);
-                  }}
-                  className="bgItem"
-                >
-                  Tresnja
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("visnja");
-                    forModal(visnja);
-                  }}
-                  className="bgItem"
-                >
-                  Visnja
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("sljiva");
-                    forModal(sljiva);
-                  }}
-                  className="bgItem"
-                >
-                  Sljiva
-                </Dropdown.Item>
+                {kosticavo.map((el) => (
+                  <Dropdown.Item
+                    key={el.id}
+                    onClick={() => {
+                      mark(el.name.toLowerCase());
+                      setFruit(el);
+                    }}
+                    className="bgItem"
+                  >
+                    {el.name}
+                  </Dropdown.Item>
+                ))}
               </Dropdown.Menu>
             </Dropdown>
             <Dropdown style={{ marginTop: "500px" }}>
               <Dropdown.Toggle
                 variant="light"
-                className="m3"
+                className="m3 m33"
                 id="dropdown-basic"
               >
                 <GiAlmond
@@ -425,36 +249,21 @@ function Home() {
                   className="mIcon"
                   style={{ color: "#996633" }}
                 />{" "}
-                jezgrasto
+                {/* jezgrasto */}
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("orah");
-                    forModal(orah);
-                  }}
-                  className="bgItem"
-                >
-                  Orah
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("lesnik");
-                    forModal(lesnik);
-                  }}
-                  className="bgItem"
-                >
-                  Lesnik
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => {
-                    mark("badem");
-                    forModal(badem);
-                  }}
-                  className="bgItem"
-                >
-                  Badem
-                </Dropdown.Item>
+                {jezgrasto.map((el) => (
+                  <Dropdown.Item
+                    key={el.id}
+                    onClick={() => {
+                      mark(el.name.toLowerCase());
+                      setFruit(el);
+                    }}
+                    className="bgItem"
+                  >
+                    {el.name}
+                  </Dropdown.Item>
+                ))}
               </Dropdown.Menu>
             </Dropdown>
           </div>
@@ -464,45 +273,26 @@ function Home() {
 
       <Modal
         size="lg"
-        show={show}
-        onHide={() => setShow(false)}
-        dialogClassName="modal-90w"
-        aria-labelledby="example-custom-modal-styling-title"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-custom-modal-styling-title">
-            <h2>{modal.title}</h2>
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h3>{modal.city}</h3>
-          <div className="col-10 offset-1">
-            <img src={pictCity()} alt={modal.city} className="img" />
-          </div>
-          <h4>{modal.h1}</h4>
-          <p>{modal.p1}</p>
-          <h5>{modal.h2}</h5>
-          <p>{modal.p2}</p>
-          <p>{modal.p3}</p>
-        </Modal.Body>
-      </Modal>
-
-      <Modal
-        size="lg"
         show={showModal}
         onHide={() => setShowModal(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-lg">
-            {fruit.name}
+            <h4>{district.title}</h4>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="container">
             <div className="row">
               <div className="col-10 offset-1">
+                <h4>{district.city}</h4>
+                <p className="mt-3">{district.p1}</p>
+              </div>
+            </div>
+            <div className="row mt-3">
+              <div className="col-10 offset-1">
+                <h3>{fruit.name}</h3>
                 <img src={pictFruit()} alt={fruit.name} className="img" />
                 <p>{fruit.content.uvod}</p>
                 <h4>{fruit.content.h1}</h4>
