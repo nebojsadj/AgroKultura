@@ -3,6 +3,7 @@ import { Form, Col, Button, Overlay, Popover } from "react-bootstrap";
 import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail, AiFillFacebook } from "react-icons/ai";
 import { GrInstagram } from "react-icons/gr";
+import emailjs from "emailjs-com";
 
 function Contact() {
   const [validated, setValidated] = useState(false);
@@ -15,6 +16,7 @@ function Contact() {
     }
 
     setValidated(true);
+    sendEmail();
   };
 
   const [show, setShow] = useState(false);
@@ -26,15 +28,40 @@ function Contact() {
     setTarget(event.target);
   };
 
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_jiuu8zf",
+        "template_cp09lds",
+        e.target,
+        "user_C6R6NBvn6aXViZOCdS2ms"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
+
   return (
     <div className="container">
       <div className="row">
         <div className="col-10 offset-1 mt-5 contactWrap border">
           <div className="text-center mt-4">
-            <FaPhoneAlt className="text-light" size="2em" />
+            <FaPhoneAlt className="text-light call" size="2em" />
             <br />
             <div ref={ref}>
-              <Button variant="light" className="mt-4" onClick={handleClick}>
+              <Button
+                variant="light"
+                className="mt-4 contBtn"
+                onClick={handleClick}
+              >
                 Kontak telefon!
               </Button>
               <Overlay
@@ -73,20 +100,22 @@ function Contact() {
               </Overlay>
             </div>
           </div>
-          <p style={{ fontSize: "18px", color: "white" }} className="mt-4 mb-4">
-            Zainteresovani ste za nase usluge i cene nasih usluga? Budite
-            slobodni da nam posaljete informativni email sa opisom, vaseg
-            postojeceg zasada ili zasada koji planirate da podignete, a jedan od
-            nasih inzenjera ce Vas kontaktirati u najkracem mogucem roku u cilju
-            problema.
+          <p
+            style={{ fontSize: "18px", color: "white" }}
+            className="mt-4 mb-4 mConsult"
+          >
+            <b className="ml-4">Zainteresovani ste za naše usluge</b> i cene
+            naših usluga? Budite slobodni da nam pošaljete informativni email sa
+            opisom, vašeg zasada ili zasada koji planirate da podignete, a jedan
+            od naših inženjera će Vas kontaktirati u najkraćem mogućem roku.
           </p>
         </div>
       </div>
       <div className="row">
         <div className="col-6 offset-3 text-center mt-4 iconBorder">
-          <AiOutlineMail size="3em" className="iconColor mt-2 mb-2" />
-          <AiFillFacebook size="2.8em" className="ml-2 iconColor" />
-          <GrInstagram size="2.4em" className="ml-2 iconColor" />
+          <AiOutlineMail size="3em" className="iconColor mt-2 mb-2 icon1" />
+          <AiFillFacebook size="2.8em" className="ml-2 iconColor icon2" />
+          <GrInstagram size="2.4em" className="ml-2 iconColor icon3" />
         </div>
       </div>
       <div className="row">
@@ -94,8 +123,8 @@ function Contact() {
           <Form
             noValidate
             validated={validated}
-            onSubmit={handleSubmit}
-            className="mt-4 mb-4"
+            onSubmit={sendEmail}
+            className="mt-4 mb-4 formFont"
           >
             <Form.Row>
               <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -103,8 +132,9 @@ function Contact() {
                 <Form.Control
                   required
                   type="text"
-                  placeholder="Vase ime"
+                  placeholder="Vaše ime"
                   autoComplete="off"
+                  name="name"
                 />
               </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationCustom02">
@@ -112,17 +142,19 @@ function Contact() {
                 <Form.Control
                   required
                   type="text"
-                  placeholder="Vase prezime"
+                  placeholder="Vaše prezime"
                   autoComplete="off"
+                  name="lastName"
                 />
               </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationCustomUsername">
                 <Form.Label className="text-light">Telefon</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Vas telefon"
+                  placeholder="Vaš telefon"
                   autoComplete="off"
                   required
+                  name="phone"
                 />
               </Form.Group>
             </Form.Row>
@@ -132,9 +164,10 @@ function Contact() {
                 <Form.Control
                   as="textarea"
                   type="text"
-                  placeholder="Vasa poruka"
+                  placeholder="Vaša poruka"
                   autoComplete="off"
                   required
+                  name="message"
                 />
               </Form.Group>
             </Form.Row>
@@ -143,14 +176,15 @@ function Contact() {
                 <Form.Label className="text-light">Email</Form.Label>
                 <Form.Control
                   type="email"
-                  placeholder="Vas_email@gmail.com"
+                  placeholder="Vaš_email@gmail.com"
                   autoComplete="off"
                   required
+                  name="email"
                 />
               </Form.Group>
             </Form.Row>
-            <Button variant="light" type="submit" className="mb-3">
-              Posalji
+            <Button variant="light" type="submit" className="mb-3 posaljiBtn">
+              Pošalji
             </Button>
           </Form>
         </div>

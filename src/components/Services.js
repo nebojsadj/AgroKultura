@@ -18,6 +18,7 @@ function Services() {
             <Card className="text-center accordionCard">
               <Card.Header className="border">
                 <Accordion.Toggle
+                  className="btnServices"
                   as={Button}
                   variant="outline-light"
                   size="lg"
@@ -30,7 +31,7 @@ function Services() {
               </Card.Header>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
-                  <p className="accFont">
+                  <p className="accFont btnServices">
                     Kompletna usluga u vidu odabira parcele, uzimanje uzoraka
                     zemljišta, odabira sortimenta, rasporeda sadnje, održavanja
                     postojećih zasada, pravljenje plana prehrane i zaštite
@@ -42,6 +43,7 @@ function Services() {
             <Card className="text-center accordionCard">
               <Card.Header className="border">
                 <Accordion.Toggle
+                  className="btnServices"
                   as={Button}
                   variant="outline-light"
                   size="lg"
@@ -54,12 +56,12 @@ function Services() {
               </Card.Header>
               <Accordion.Collapse eventKey="1">
                 <Card.Body>
-                  <p className="accFont">
+                  <p className="accFont btnServices">
                     Komunikacija putem Viber-a, Skype-a, Zoom-a, Microsoft
                     times-a, u sistemu jedan na jedan ili organizovanje
                     radionica sa više učesnika.
                   </p>
-                  <p className="accFont">
+                  <p className="accFont btnServices">
                     Kako biste se posavetovali sa nama potrebno je popuniti
                     kratku anketu na nasoj stranici za{" "}
                     <Link to="/consultation">konsultacije</Link>.
@@ -72,43 +74,35 @@ function Services() {
       </div>
       <div className="row">
         <div className="col-10 offset-1 contactWrap border mt-4">
-          <Carousel className="mt-3 mb-3">
+          <Carousel
+            className="mt-3 mb-3"
+            prevIcon={
+              <span
+                aria-hidden="true"
+                className="carousel-control-prev-icon carouselControl"
+              />
+            }
+            nextIcon={
+              <span
+                aria-hidden="true"
+                className="carousel-control-next-icon carouselControl"
+              />
+            }
+          >
             <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img1} alt="vocnjak" />
-              <Carousel.Caption>
-                {/* <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p> */}
-              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={500}>
               <img className="d-block w-100 slajd" src={img2} alt="vocnjak" />
-              <Carousel.Caption>
-                {/* <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={500}>
               <img className="d-block w-100 slajd" src={img3} alt="vocnjak" />
-              <Carousel.Caption>
-                {/* <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={500}>
               <img className="d-block w-100 slajd" src={img6} alt="vocnjak" />
-              <Carousel.Caption>
-                {/* <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={500}>
               <img className="d-block w-100 slajd" src={img5} alt="vocnjak" />
-              <Carousel.Caption>
-                {/* <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-              </Carousel.Caption>
             </Carousel.Item>
             {/* <Carousel.Item>
               <img className="d-block w-100 slajd" src={img4} alt="vocnjak" />

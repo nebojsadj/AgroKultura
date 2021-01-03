@@ -110,10 +110,10 @@ function Home() {
       <div className="container mt-5 mb-5 home">
         <div className="row">
           <div className="col-2 mt-5">
-            <Dropdown style={{ marginLeft: "55%" }}>
+            <Dropdown>
               <Dropdown.Toggle
                 variant="light"
-                className="m3"
+                className="m3 m333"
                 id="dropdown-basic"
               >
                 <GiShinyApple
@@ -137,10 +137,10 @@ function Home() {
                 ))}
               </Dropdown.Menu>
             </Dropdown>
-            <Dropdown style={{ marginTop: "500px", marginLeft: "55%" }}>
+            <Dropdown style={{ marginTop: "330%" }}>
               <Dropdown.Toggle
                 variant="light"
-                className="m3 m33"
+                className="m3 m33 m333"
                 id="dropdown-basic"
               >
                 <GiStrawberry
@@ -166,7 +166,7 @@ function Home() {
             </Dropdown>
           </div>
           <div className="col-8" style={{ textAlign: "center" }}>
-            <h4 className="text-center text-light mt-3">
+            <h4 className="text-center text-light mt-3 m2">
               {centers.orange.length > 0 ? title : "."}
             </h4>
             <svg
@@ -210,10 +210,10 @@ function Home() {
             </svg>
           </div>
           <div className="col-2 mt-5">
-            <Dropdown className="m3">
+            <Dropdown>
               <Dropdown.Toggle
                 variant="light"
-                className="m3"
+                className="m3 m334"
                 id="dropdown-basic"
               >
                 <GiCherry
@@ -238,10 +238,10 @@ function Home() {
                 ))}
               </Dropdown.Menu>
             </Dropdown>
-            <Dropdown style={{ marginTop: "500px" }}>
+            <Dropdown style={{ marginTop: "330%" }}>
               <Dropdown.Toggle
                 variant="light"
-                className="m3 m33"
+                className="m3 m33 m334"
                 id="dropdown-basic"
               >
                 <GiAlmond

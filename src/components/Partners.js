@@ -13,7 +13,7 @@ function Partners() {
             <Card.Img variant="top" src={img1} className="cardsImgs" />
             <Card.Body>
               <Card.Title>GENERALE</Card.Title>
-              <Card.Text>
+              <Card.Text className="partnersText">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.Some quick example text to build
                 on the card title and make up the bulk of the card's content.
@@ -26,7 +26,7 @@ function Partners() {
             <Card.Img variant="top" src={img2} className="cardsImgs" />
             <Card.Body>
               <Card.Title>RAIFFEISEN</Card.Title>
-              <Card.Text>
+              <Card.Text className="partnersText">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.Some quick example text to build
                 on the card title and make up the bulk of the card's content.
@@ -39,7 +39,7 @@ function Partners() {
             <Card.Img variant="top" src={img3} className="cardsImgs" />
             <Card.Body>
               <Card.Title>INTESA</Card.Title>
-              <Card.Text>
+              <Card.Text className="partnersText">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.Some quick example text to build
                 on the card title and make up the bulk of the card's content.

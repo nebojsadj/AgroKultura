@@ -9,10 +9,12 @@ import Home from "./components/Home";
 import Partners from "./components/Partners";
 import Services from "./components/Services";
 import Consultation from "./components/Consultation";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Header className="backHeader" />
       <Navigation />
       <Switch>

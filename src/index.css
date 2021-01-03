@@ -4,12 +4,11 @@
 }
 
 .border {
-    /* background-color: white; */
     background-color: rgb(105, 175, 105);
 }
 
 .active {
-    background-color: white !important;
+    /* background-color: white !important; */
 }
 
 .navNone {
@@ -125,7 +124,6 @@ use:hover {
 
 .iconColor {
     color: rgb(105, 175, 105);
-    /* color: #333333; */
 }
 
 .img {
@@ -153,7 +151,22 @@ use:hover {
 .logoImg {
     width: 300px;
     height: 60px;
-    /* margin-left: 2%; */
+}
+
+.mlicon {
+    margin-left: 0.3%;
+}
+
+.carouselControl {
+    width: 1.8em !important;
+    height: 1.8em !important;
+    border: 2px solid rgb(105, 175, 105) !important;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.m333 {
+    margin-left: 55%;
 }
 
 @media all and (max-width: 768px) {
@@ -167,10 +180,10 @@ use:hover {
         font-size: 12px;
     }
     .m33 {
-        margin-top: -100px;
+        margin-top: 100px;
     }
     .m44 {
-        font-size: 13px;
+        font-size: 14px;
     }
     .mIcon {
         width: 23px;
@@ -181,48 +194,294 @@ use:hover {
         width: 26px;
         height: 36px;
     }
-}
-
-@media all and (max-width: 576px) {
-    .svgStyle {
-        width: 230px;
-        height: 500px;
+    .colorFooter {
+        font-size: 14px;
+    }
+    .btnServices {
+        font-size: 18px;
+    }
+    .aboutImg {
+        width: 400px;
+        height: 360px;
     }
 }
 
-@media all and (max-width: 480px) {
-    .svgStyle {
-        width: 230px;
-        height: 500px;
+@media all and (max-width: 425px) {
+    .m1 {
+        width: 220px;
+        height: 40px;
     }
-    .logoImg {
-        width: 270px;
-        height: 110px;
+    .m2 {
+        font-size: 20px;
     }
     .navNone {
         font-size: 13px;
     }
-    .mIcon {
-        width: 25px;
-        height: 25px;
+    .svgStyle {
+        width: 220px;
+        height: 400px;
+    }
+    .m3 {
+        width: 50px;
+        height: 30px;
+        font-size: 12px;
         margin-left: 0px;
     }
-    /* .m3::after {
-        display: none;
-    } */
-}
-
-
-/* @media all and (max-width: 420px) {
-    .logoImg {
-        width: 250px;
-        height: 90px;
+    .m33 {
+        margin-top: 220px;
     }
-    .navNone {
-        font-size: 10px;
+    .m333 {
+        margin-left: 0;
+    }
+    .m334 {
+        margin-left: -15px;
+    }
+    .m44 {
+        font-size: 13px;
     }
     .mIcon {
         width: 20px;
         height: 20px;
+        margin-left: 0px;
     }
-} */
+    .m4 {
+        width: 20px;
+        height: 26px;
+    }
+    .mFooter {
+        font-size: 15px;
+    }
+    .colorFooter {
+        font-size: 13px;
+    }
+    .sizeCopy {
+        font-size: 10px;
+    }
+    .btnServices {
+        font-size: 17px;
+    }
+    .aboutImg {
+        width: 280px;
+        height: 260px;
+    }
+    .m22 {
+        font-size: 22px;
+    }
+    .m222 {
+        font-size: 22px;
+    }
+    .mConsult {
+        font-size: 17px !important;
+    }
+    .icon1 {
+        width: 43px;
+        height: 43px;
+    }
+    .icon2 {
+        width: 39.5px;
+        height: 39.5px;
+    }
+    .icon3 {
+        width: 34px;
+        height: 34px;
+    }
+    .posaljiBtn {
+        font-size: 15px;
+    }
+    .contBtn {
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .m1 {
+        width: 200px;
+        height: 37px;
+    }
+    .m2 {
+        font-size: 18px;
+    }
+    .navNone {
+        font-size: 11px;
+    }
+    .svgStyle {
+        width: 220px;
+        height: 400px;
+    }
+    .m3 {
+        width: 46px;
+        height: 28px;
+        font-size: 12px;
+        margin-left: 0px;
+    }
+    .m33 {
+        margin-top: 240px;
+    }
+    .m333 {
+        margin-left: 0;
+    }
+    .m334 {
+        margin-left: -20px;
+    }
+    .m44 {
+        font-size: 12px;
+    }
+    .mIcon {
+        width: 18px;
+        height: 18px;
+        margin-left: 0px;
+    }
+    .m4 {
+        width: 18px;
+        height: 24px;
+    }
+    .mFooter {
+        font-size: 13px;
+    }
+    .colorFooter {
+        font-size: 12px;
+    }
+    .sizeCopy {
+        font-size: 8px;
+    }
+    .btnServices {
+        font-size: 16px;
+    }
+    .aboutImg {
+        width: 240px;
+        height: 220px;
+    }
+    .m22 {
+        font-size: 21px;
+    }
+    .m222 {
+        font-size: 20px;
+    }
+    .mConsult {
+        font-size: 16px !important;
+    }
+    .icon1 {
+        width: 41px;
+        height: 41px;
+    }
+    .icon2 {
+        width: 37.5px;
+        height: 37.5px;
+    }
+    .icon3 {
+        width: 32px;
+        height: 32px;
+    }
+    .posaljiBtn {
+        font-size: 14px;
+    }
+    .contBtn {
+        font-size: 14px;
+    }
+    .call {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .m1 {
+        width: 180px;
+        height: 34px;
+    }
+    .m2 {
+        font-size: 18px;
+    }
+    .navNone {
+        font-size: 11px;
+    }
+    .svgStyle {
+        width: 180px;
+        height: 330px;
+    }
+    .m3 {
+        width: 42px;
+        height: 30px;
+        font-size: 12px;
+        margin-left: 0px;
+    }
+    .m33 {
+        margin-top: 210px;
+    }
+    .m333 {
+        margin-left: 0;
+    }
+    .m334 {
+        margin-left: -20px;
+    }
+    .m44 {
+        font-size: 11px;
+    }
+    .mIcon {
+        width: 15px;
+        height: 15px;
+        margin-left: 0px;
+    }
+    .m4 {
+        width: 16px;
+        height: 22px;
+    }
+    .mFooter {
+        font-size: 12px;
+    }
+    .colorFooter {
+        font-size: 11px;
+    }
+    .sizeCopy {
+        font-size: 7px;
+    }
+    .btnServices {
+        font-size: 14px;
+    }
+    .aboutImg {
+        width: 190px;
+        height: 180px;
+    }
+    .m22 {
+        font-size: 19px;
+    }
+    .m212 {
+        font-size: 14px;
+    }
+    .m222 {
+        font-size: 18px;
+    }
+    .partnersText {
+        font-size: 14px;
+    }
+    .mConsult {
+        font-size: 15px !important;
+    }
+    .icon1 {
+        width: 38px;
+        height: 38px;
+    }
+    .icon2 {
+        width: 34.5px;
+        height: 34.5px;
+        margin-left: 4px !important;
+    }
+    .icon3 {
+        width: 29px;
+        height: 29px;
+        margin-left: 4px !important;
+    }
+    .posaljiBtn {
+        font-size: 13px;
+    }
+    .contBtn {
+        font-size: 13px;
+    }
+    .formFont {
+        font-size: 14px;
+    }
+    .call {
+        width: 26px;
+        height: 26px;
+    }
+}

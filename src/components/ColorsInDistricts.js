@@ -5,14 +5,14 @@ import yellow from "./Data/imgs/yellowMap.png";
 
 function ColorsInDistricts() {
   return (
-    <div className="container mt-2 text-center">
+    <div className="container mt-2 text-center m14">
       <div className="row">
-        <div className="col-8 offset-2">
+        <div className="col-10 offset-1">
           <div className="row">
             <div className="col">
               <img src={red} alt={red} className="karta m4" />
               <span className="ml-3 text-light m44">
-                Idealno vocarski centri
+                Idealno voćarski centri
               </span>
             </div>
           </div>
@@ -20,15 +20,15 @@ function ColorsInDistricts() {
             <div className="col">
               <img src={orange} alt={orange} className="karta m4" />
               <span className="ml-3 text-light m44">
-                Povoljno-potrebno vise parametara ispitivanja
+                Povoljno-uz više parametara ispitivanja
               </span>
             </div>
           </div>
           <div className="row">
-            <div className="col">
-              <img src={yellow} alt={yellow} className="karta mb-4 m4" />
+            <div className="col mb-4">
+              <img src={yellow} alt={yellow} className="karta m4" />
               <span className="ml-3 text-light m44">
-                Manje povoljno-potrebna puna ekspertiza svih parametara
+                Manje povoljno-uz punau ekspertizu
               </span>
             </div>
           </div>

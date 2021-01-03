@@ -1,8 +1,11 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Navigation() {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <Nav fill variant="tabs" className="navNone">
       <Nav.Item>
