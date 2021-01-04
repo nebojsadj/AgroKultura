@@ -8,11 +8,11 @@ import img3 from "./Data/imgs/img3.jpg";
 import img5 from "./Data/imgs/img5.jpg";
 import img6 from "./Data/imgs/img6.jpg";
 import img7 from "./Data/imgs/img7.jpg";
-import img8 from "./Data/imgs/img8.jpg";
+// import img8 from "./Data/imgs/img8.jpg";
 import img9 from "./Data/imgs/img9.jpg";
-import img10 from "./Data/imgs/img10.jpg";
+// import img10 from "./Data/imgs/img10.jpg";
 import img11 from "./Data/imgs/img11.jpg";
-import img12 from "./Data/imgs/img12.jpg";
+// import img12 from "./Data/imgs/img12.jpg";
 import img13 from "./Data/imgs/img13.jpg";
 import img14 from "./Data/imgs/img14.jpg";
 import img15 from "./Data/imgs/img15.jpg";
@@ -136,36 +136,36 @@ function Services() {
                 <h5>Agronom S</h5>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={1000}>
+            {/* <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img8} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
-            </Carousel.Item>
+            </Carousel.Item> */}
             <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img9} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={1000}>
+            {/* <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img10} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
-            </Carousel.Item>
+            </Carousel.Item> */}
             <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img11} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={1000}>
+            {/* <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img12} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
-            </Carousel.Item>
+            </Carousel.Item> */}
             <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img13} alt="vocnjak" />
               <Carousel.Caption>

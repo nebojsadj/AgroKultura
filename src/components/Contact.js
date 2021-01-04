@@ -9,33 +9,44 @@ function Contact() {
   const [show, setShow] = useState(false);
   const [target, setTarget] = useState(null);
   const ref = useRef(null);
+  const [success, setSuccess] = useState("");
 
-  const [valid, setValid] = useState({
-    name: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const { name, lastName, email, phone, message } = valid;
-  const [check, setCheck] = useState("check");
+  // const [valid, setValid] = useState({
+  //   name: "",
+  //   lastName: "",
+  //   email: "",
+  //   phone: "",
+  //   message: "",
+  // });
+  // const { name, lastName, email, phone, message } = valid;
+  // const [check, setCheck] = useState("check");
 
   const handleClick = (event) => {
     setShow(!show);
     setTarget(event.target);
   };
 
-  const validate = (e) => {
-    e.preventDefault();
-    setCheck("");
-  };
-  const success = Object.values(valid).filter((el) => el === "");
-  console.log(success.length);
+  // const validate = (e) => {
+  //   e.preventDefault();
+  //   setCheck("");
+  // };
+  // const success = Object.values(valid).filter((el) => el === "");
+  // console.log(success.length);
 
-  const sendCheck = () => {
-    if (email !== "") {
-      sendEmail();
-    }
+  // const sendCheck = () => {
+  //   if (email !== "") {
+  //     sendEmail();
+  //   }
+  // };
+
+  const timeOut = () => {
+    setTimeout(function () {
+      setSuccess("Poruka je uspešno poslata! Hvala na ukazanom poverenju!");
+    }, 500);
+
+    setTimeout(function () {
+      setSuccess("");
+    }, 6000);
   };
 
   function sendEmail(e) {
@@ -57,6 +68,7 @@ function Contact() {
         }
       );
     e.target.reset();
+    timeOut();
   }
 
   return (
@@ -227,6 +239,9 @@ function Contact() {
               Pošalji
             </Button>
           </Form>
+          <div className="col-10 offset-1">
+            <h4 className="text-light text-center mb-3 mSucMsg">{success}</h4>
+          </div>
         </div>
       </div>
     </div>

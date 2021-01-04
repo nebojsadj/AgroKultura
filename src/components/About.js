@@ -23,8 +23,7 @@ function About() {
             nalazi.
           </p>
           <p className="m212">
-            <b className="ml-4">Moto:</b> ne robovati sterotipima,vec uzdignute
-            glave sa čvrstim nogama na zemlji učiniti nemoguće.
+            <b className="ml-4">Moto:</b> uz nas i pored nas sve raste!
           </p>
         </div>
       </div>

@@ -239,7 +239,7 @@ export const šljiva = {
     name: "Šljiva",
     content: {
         uvod: `Šljiva raste kao srednje veliko stablo, manje ili više bujnog rasta. Pojedine sorte zahtevaju oprašivače, dok se neke oprašivaju same. Šljive donose plodove na dvogodišnjim ili trogodišnjim granama. Vreme cvetanja je u aprilu, pre listanja, a plodovi sazrevaju u avgustu, septembru i oktobru, zavisno od sortie. Ne zahtevaju redovno i obilno obrezivanje. Šljive su bogate vitaminima A i C. Spadaju u niskokalorično voće tako da se preporučuju u ishrani.`,
-        h1: `Agroekološki uslovi za gajenje sljive`,
+        h1: `Agroekološki uslovi za gajenje šljive`,
         h2: `Temperatura`,
         p2: `Tokom dubokog zimskog mirovanja šljiva podnosi apsolutne minimalne temperature čak i do ispod -30 °C. U fazi otvaranja cvetnih pupoljaka, cvetovi mogu izmrznuti na temperaturi od -1 °C do -5 °C, a u fazi punog cvetanja izmrzava na temperaturama od -0,5 °C do -2,2 °C. Kao i kod ostalih voćnih vrsta, mali plodići su još osetljivi, pa stradaju na temperaturi od -0,5 °C do -2 °C. Kvalitet ploda zavisi o srednjoj temperaturi tokom juna, jula i avgusta. Ako su srednje temperature tih meseci 18 - 20 °C, onda su ta područja odlična za proizvodnju šljive.
         `,

@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Col, Button } from "react-bootstrap";
 import emailjs from "emailjs-com";
 
 function Consultation() {
+  const [success, setSuccess] = useState("");
+
+  const timeOut = () => {
+    setTimeout(function () {
+      setSuccess("Anketa je uspešno poslata! Hvala na ukazanom poverenju!");
+    }, 500);
+
+    setTimeout(function () {
+      setSuccess("");
+    }, 6000);
+  };
+
   function sendEmail(e) {
     e.preventDefault();
 
@@ -22,6 +34,7 @@ function Consultation() {
         }
       );
     e.target.reset();
+    timeOut();
   }
 
   return (
@@ -275,6 +288,9 @@ function Consultation() {
               Pošalji
             </Button>
           </Form>
+          <div className="col-10 offset-1">
+            <h4 className="text-white text-center mb-3 mSucMsg">{success}</h4>
+          </div>
         </div>
       </div>
     </div>

@@ -498,7 +498,7 @@ export const data = [{
             "ogrozd",
             "ribizla",
         ],
-        p1: "Prokuplje predstavlja sjedište istoimene opštine kao i Topličkog okruga.",
+        p1: "Prokuplje predstavlja središte istoimene opštine kao i Topličkog okruga.",
     },
     {
         title: "Pirotski okrug",

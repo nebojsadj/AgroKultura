@@ -14,9 +14,8 @@ function Partners() {
             <Card.Body>
               <Card.Title>Gazdinstvo Simović</Card.Title>
               <Card.Text className="partnersText">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.Some quick example text to build
-                on the card title and make up the bulk of the card's content.
+                Gazdinstvo Simovic se tradicionalno bavi uzgojem voca vise vrsta
+                kao sto su: tresnje, kajsije, borovnica i vinova loza.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -27,9 +26,7 @@ function Partners() {
             <Card.Body>
               <Card.Title>Raiffeisen</Card.Title>
               <Card.Text className="partnersText">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.Some quick example text to build
-                on the card title and make up the bulk of the card's content.
+                Raiffeisen banka je nasa dugogodisnja podrska, i uvek je uz nas!
               </Card.Text>
             </Card.Body>
           </Card>
@@ -40,9 +37,8 @@ function Partners() {
             <Card.Body>
               <Card.Title>Gazdinstvo Perić</Card.Title>
               <Card.Text className="partnersText">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.Some quick example text to build
-                on the card title and make up the bulk of the card's content.
+                Gazdinstvo Peric se tradicionalno bavi uzgojem voca vise vrsta
+                kao sto su: tresnje, kajsije, borovnica i vinova loza.
               </Card.Text>
             </Card.Body>
           </Card>
