@@ -28,7 +28,7 @@ function ColorsInDistricts() {
             <div className="col mb-4">
               <img src={yellow} alt={yellow} className="karta m4" />
               <span className="ml-3 text-light m44">
-                Manje povoljno-uz punau ekspertizu
+                Manje povoljno-uz punu ekspertizu
               </span>
             </div>
           </div>

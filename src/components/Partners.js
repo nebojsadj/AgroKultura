@@ -1,8 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import img1 from "./Data/imgs/sg.png";
+import img1 from "./Data/imgs/gazdinstvo0.jpg";
 import img2 from "./Data/imgs/rai.jpg";
-import img3 from "./Data/imgs/int.jpg";
+import img3 from "./Data/imgs/gazdinstvo1.jpg";
 
 function Partners() {
   return (
@@ -12,7 +12,7 @@ function Partners() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src={img1} className="cardsImgs" />
             <Card.Body>
-              <Card.Title>GENERALE</Card.Title>
+              <Card.Title>Gazdinstvo Simović</Card.Title>
               <Card.Text className="partnersText">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.Some quick example text to build
@@ -25,7 +25,7 @@ function Partners() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src={img2} className="cardsImgs" />
             <Card.Body>
-              <Card.Title>RAIFFEISEN</Card.Title>
+              <Card.Title>Raiffeisen</Card.Title>
               <Card.Text className="partnersText">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.Some quick example text to build
@@ -38,7 +38,7 @@ function Partners() {
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src={img3} className="cardsImgs" />
             <Card.Body>
-              <Card.Title>INTESA</Card.Title>
+              <Card.Title>Gazdinstvo Perić</Card.Title>
               <Card.Text className="partnersText">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.Some quick example text to build

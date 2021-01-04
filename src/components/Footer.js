@@ -42,18 +42,36 @@ function Footer() {
           <h5 className="text-white mFooter">Kontakti</h5>
           <ul className="list-unstyled mt-3">
             <li className="colorFooter colorLink">
-              <FaPhoneAlt className="mlicon" size="1.2em" /> +381 64 8066436
+              <FaPhoneAlt className="mlicon" size="1.2em" /> +381 65 6922333
             </li>
             <li className="colorFooter colorLink">
-              <AiOutlineMail size="1.6em" className="mt-1" />{" "}
-              agronoms.contact@gmail.com
+              <a
+                className="colorLink"
+                href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+                target="blanc"
+              >
+                <AiOutlineMail size="1.6em" className="mt-1" />{" "}
+                agronoms.contact@gmail.com
+              </a>
             </li>
             <li className="colorFooter colorLink">
-              <AiFillFacebook size="1.7em" /> Potražite nas na Facebook-u
+              <a
+                className="colorLink"
+                href="https://www.facebook.com/Agronom-S-102574891795506"
+                target="blanc"
+              >
+                <AiFillFacebook size="1.7em" /> Potražite nas na Facebook-u
+              </a>
             </li>
             <li className="colorFooter colorLink">
-              <GrInstagram size="1.5em" className="mlicon mt-1" /> Potražite nas
-              na Instagram-u
+              <a
+                className="colorLink"
+                href="https://www.facebook.com/Agronom-S-102574891795506"
+                target="blanc"
+              >
+                <GrInstagram size="1.5em" className="mlicon mt-1" /> Potražite
+                nas na Instagram-u
+              </a>
             </li>
           </ul>
         </div>
@@ -63,7 +81,7 @@ function Footer() {
           </h5>
           <ul className="list-unstyled mt-3">
             <li className="colorFooter">
-              Naš cilj je pametno ulaganje, planska sadnja i veliki prinos. Tu
+              Naš cilj je pametno ulaganje, planska sadnja i visoki prinos. Tu
               samo da Vam damo sve neophodne informacije.
             </li>
           </ul>

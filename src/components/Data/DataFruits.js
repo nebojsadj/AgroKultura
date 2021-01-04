@@ -170,7 +170,7 @@ export const višnja = {
     name: "Višnja",
     content: {
         uvod: `Višnja ima manju krošnju od trešnje i uglavnom raste kao žbunoliko stablo. Puno se proizvodi sorta oblačinska višnja pogodna za industrijsku preradu.  Najbolje uspeva na obroncima i blagim padinama okrenutim jugu, jugoistoku i istoku. Plod višnje je svetlocrvene ili tamnocrvene boje, slatkog ili kiselkastog ukusa. Spada u rano voće, koje se manje jede u svežem stanju, a više se industrijski prerađuje (sokovi, džemovi, rakija, vino, prelivi za konditorske proizvode, kompot itd.).`,
-        h1: `Agroekološki uslovi za gajenje visnje`,
+        h1: `Agroekološki uslovi za gajenje višnje`,
         h2: `Temperatura`,
         p2: `U vreme dubokog zimskog mirovanja višnja može podneti i -35 °C. U fazi početka vegetacije ona je posebno osetljiva na niske temperature. U toj fenofazi, uz niske noćne temperature dolazi do izmrzavanja debla (zbog naglog jutarnjeg zagrevanja kore) u obliku pucanja kore. Najosetljivija je 3 - 4 nedelje pre cvetanja i u cvetanju. U toj fenofazi nastaju znatne štete ako temperature padnu na -2,2 °C do -2,7 °C. Za razliku od drugih voćnih vrsta, višnja je otpornija prema visokim temperaturama, pa nema šteta kad temperature prelaze i 30 °C.  `,
         h3: `Voda`,

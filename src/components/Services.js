@@ -5,9 +5,20 @@ import About from "./About";
 import img1 from "./Data/imgs/img1.jpg";
 import img2 from "./Data/imgs/img2.jpg";
 import img3 from "./Data/imgs/img3.jpg";
-// import img4 from "./Data/imgs/img4.jpg";
 import img5 from "./Data/imgs/img5.jpg";
 import img6 from "./Data/imgs/img6.jpg";
+import img7 from "./Data/imgs/img7.jpg";
+import img8 from "./Data/imgs/img8.jpg";
+import img9 from "./Data/imgs/img9.jpg";
+import img10 from "./Data/imgs/img10.jpg";
+import img11 from "./Data/imgs/img11.jpg";
+import img12 from "./Data/imgs/img12.jpg";
+import img13 from "./Data/imgs/img13.jpg";
+import img14 from "./Data/imgs/img14.jpg";
+import img15 from "./Data/imgs/img15.jpg";
+import img16 from "./Data/imgs/img16.jpg";
+import img17 from "./Data/imgs/img17.jpg";
+import img18 from "./Data/imgs/img18.jpg";
 
 function Services() {
   return (
@@ -91,22 +102,106 @@ function Services() {
           >
             <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img1} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={500}>
+            <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img2} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={500}>
+            <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img3} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={500}>
+            <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img6} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={500}>
+            <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img5} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
             </Carousel.Item>
-            {/* <Carousel.Item>
-              <img className="d-block w-100 slajd" src={img4} alt="vocnjak" />
-            </Carousel.Item> */}
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img7} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img8} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img9} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img10} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img11} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img12} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img13} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img14} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img15} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img16} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img17} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img18} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
           </Carousel>
         </div>
       </div>

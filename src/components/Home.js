@@ -40,6 +40,7 @@ import {
   ogrozd,
   ribizla,
 } from "./Data/DataFruits";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [centers, setCenters] = useState({
@@ -88,7 +89,7 @@ function Home() {
         return malinaImg;
       case "Orah":
         return orahImg;
-      case "Sljiva":
+      case "Šljiva":
         return sljivaImg;
       case "Trešnja":
         return tresnjaImg;
@@ -279,47 +280,57 @@ function Home() {
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-lg">
-            <h4>{district.title}</h4>
+            {/* <h4 className="mx-auto d-block text-danger">{district.title}</h4> */}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="container">
             <div className="row">
               <div className="col-10 offset-1">
-                <h4>{district.city}</h4>
+                <h4 className="text-center text-danger">
+                  {` ${district.title}, ${district.city}`}
+                </h4>
                 <p className="mt-3">{district.p1}</p>
               </div>
+              <hr />
             </div>
             <div className="row mt-3">
               <div className="col-10 offset-1">
-                <h3>{fruit.name}</h3>
+                <h3 className="text-center">{fruit.name}</h3>
                 <img src={pictFruit()} alt={fruit.name} className="img" />
                 <p>{fruit.content.uvod}</p>
-                <h4>{fruit.content.h1}</h4>
-                <h5>{fruit.content.h2}</h5>
+                <h4 className="text-center">{fruit.content.h1}</h4>
+                <h5 className="text-center">{fruit.content.h2}</h5>
                 <p>{fruit.content.p2}</p>
-                <h5>{fruit.content.h3}</h5>
+                <h5 className="text-center">{fruit.content.h3}</h5>
                 <p>{fruit.content.p3}</p>
-                <h5>{fruit.content.h4}</h5>
+                <h5 className="text-center">{fruit.content.h4}</h5>
                 <p>{fruit.content.p4}</p>
-                <h5>{fruit.content.h5}</h5>
+                <h5 className="text-center">{fruit.content.h5}</h5>
                 <p>{fruit.content.p5}</p>
-                <h5>{fruit.content.h6}</h5>
+                <h5 className="text-center">{fruit.content.h6}</h5>
                 <p>{fruit.content.p6}</p>
-                <h5>{fruit.content.h7}</h5>
+                <h5 className="text-center">{fruit.content.h7}</h5>
                 <p>{fruit.content.p7}</p>
-                <h5>{fruit.content.h8}</h5>
+                <h5 className="text-center">{fruit.content.h8}</h5>
                 <p>{fruit.content.p8}</p>
-                <h5>{fruit.content.h9}</h5>
+                <h5 className="text-center">{fruit.content.h9}</h5>
                 <p>{fruit.content.p9}</p>
-                <h5>{fruit.content.h10}</h5>
+                <h5 className="text-center">{fruit.content.h10}</h5>
                 <p>{fruit.content.p10}</p>
-                <h5>{fruit.content.h11}</h5>
+                <h5 className="text-center">{fruit.content.h11}</h5>
                 <p>{fruit.content.p11}</p>
-                <h5>{fruit.content.h12}</h5>
+                <h5 className="text-center">{fruit.content.h12}</h5>
                 <p>{fruit.content.p12}</p>
-                <h5>{fruit.content.h13}</h5>
+                <h5 className="text-center">{fruit.content.h13}</h5>
                 <p>{fruit.content.p13}</p>
+              </div>
+              <div className="col-8 offset-2 mt-3 mb-3">
+                <Link to="/contact">
+                  <button className="btn btn-success form-control">
+                    Postavi pitanje
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

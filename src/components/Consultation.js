@@ -52,6 +52,7 @@ function Consultation() {
                 type="text"
                 placeholder="Vaše ime i prezime"
                 name="ime"
+                autoComplete="off"
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridDistrict1">
@@ -60,6 +61,7 @@ function Consultation() {
                 as="select"
                 placeholder="Izaberite Vas okrug"
                 name="okrug"
+                autoComplete="off"
               >
                 <option>Izaberite Vaš okrug</option>
                 <option>Severno-bački</option>
@@ -96,9 +98,11 @@ function Consultation() {
             <Form.Group as={Col} controlId="formGridDistrict2">
               <Form.Label className="text-light">Opština</Form.Label>
               <Form.Control
+                autoComplete="off"
                 type="text"
                 placeholder="Vaša opština"
                 name="opstina"
+
                 // required
               />
             </Form.Group>
@@ -108,6 +112,7 @@ function Consultation() {
                 type="text"
                 placeholder="Vaš kontakt telefon"
                 name="telefon"
+                autoComplete="off"
                 // required
               />
             </Form.Group>
@@ -117,6 +122,7 @@ function Consultation() {
                 type="email"
                 placeholder="Vaš email"
                 name="email"
+                autoComplete="off"
                 // required
               />
             </Form.Group>
@@ -128,6 +134,7 @@ function Consultation() {
                 type="text"
                 placeholder="Površina zemljišta"
                 name="povrsina"
+                autoComplete="off"
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridDistrict2">
@@ -136,6 +143,7 @@ function Consultation() {
                 type="text"
                 placeholder="Vrsta voća"
                 name="vrstaVoca"
+                autoComplete="off"
               />
             </Form.Group>
             <Form.Group className="ml-3">
