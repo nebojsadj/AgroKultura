@@ -222,7 +222,7 @@ function Contact() {
                   //   setValid({ ...valid, email: e.target.value })
                   // }
                   type="email"
-                  placeholder="Vaš_email@gmail.com"
+                  placeholder="Vaš email"
                   autoComplete="off"
                   name="email"
                   // className={email === check && "red"}

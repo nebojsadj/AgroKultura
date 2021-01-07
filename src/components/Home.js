@@ -167,7 +167,7 @@ function Home() {
             </Dropdown>
           </div>
           <div className="col-8" style={{ textAlign: "center" }}>
-            <h4 className="text-center text-light mt-3 m2">
+            <h4 className="text-center text-light mt-3 mb-2 m2">
               {centers.orange.length > 0 ? title : "."}
             </h4>
             <svg
