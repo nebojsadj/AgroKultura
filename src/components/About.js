@@ -22,9 +22,9 @@ function About() {
             načinom proizvodnje koji je prilagođen datim uslovima u kojima se
             nalazi.
           </p>
-          <p className="m212">
+          {/* <p className="m212">
             <b className="ml-4">Moto:</b> uz nas i pored nas sve raste!
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

@@ -50,7 +50,7 @@ function Home() {
   });
   const [district, setDistrict] = useState(false);
   const [fruit, setFruit] = useState(jagoda);
-  const [title, setTitle] = useState("Izaberite okrug");
+  const [title, setTitle] = useState("Izaberite okrug!");
   const [showModal, setShowModal] = useState(false);
 
   const mark = (option) => {
@@ -168,7 +168,7 @@ function Home() {
           </div>
           <div className="col-8" style={{ textAlign: "center" }}>
             <h4 className="text-center text-light mt-3 mb-2 m2">
-              {centers.orange.length > 0 ? title : "."}
+              {centers.orange.length > 0 ? title : "Izaberite voćnu vrstu!"}
             </h4>
             <svg
               className="svgStyle mt-3"
@@ -182,7 +182,7 @@ function Home() {
                 return (
                   <use
                     onMouseOver={() => setTitle(location.title)}
-                    onMouseLeave={() => setTitle("Izaberite okrug")}
+                    onMouseLeave={() => setTitle("Izaberite okrug!")}
                     key={location.id}
                     onClick={
                       centers.orange.length > 0

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail, AiFillFacebook } from "react-icons/ai";
-import { GrInstagram } from "react-icons/gr";
+import { IoLogoYoutube } from "react-icons/io";
 
 function Footer() {
   return (
@@ -64,14 +64,10 @@ function Footer() {
               </a>
             </li>
             <li className="colorFooter colorLink">
-              <a
-                className="colorLink"
-                href="https://www.facebook.com/Agronom-S-102574891795506"
-                target="blanc"
-              >
-                <GrInstagram size="1.5em" className="mlicon mt-1" /> Potražite
-                nas na Instagram-u
-              </a>
+              {/* <a className="colorLink" href="#" target="blanc"> */}
+              <IoLogoYoutube size="1.5em" className="mlicon mt-1" /> Pogledajte
+              naš Youtube kanal
+              {/* </a> */}
             </li>
           </ul>
         </div>

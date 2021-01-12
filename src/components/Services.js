@@ -7,18 +7,21 @@ import img2 from "./Data/imgs/img2.jpg";
 import img3 from "./Data/imgs/img3.jpg";
 import img5 from "./Data/imgs/img5.jpg";
 import img6 from "./Data/imgs/img6.jpg";
-import img7 from "./Data/imgs/img7.jpg";
-// import img8 from "./Data/imgs/img8.jpg";
-import img9 from "./Data/imgs/img9.jpg";
-// import img10 from "./Data/imgs/img10.jpg";
-import img11 from "./Data/imgs/img11.jpg";
-// import img12 from "./Data/imgs/img12.jpg";
+// import img7 from "./Data/imgs/img7.jpg";
+import img8 from "./Data/imgs/img8.jpg";
+// import img9 from "./Data/imgs/img9.jpg";
+import img10 from "./Data/imgs/img10.jpg";
+// import img11 from "./Data/imgs/img11.jpg";
+import img12 from "./Data/imgs/img12.jpg";
 import img13 from "./Data/imgs/img13.jpg";
-import img14 from "./Data/imgs/img14.jpg";
+// import img14 from "./Data/imgs/img14.jpg";
 import img15 from "./Data/imgs/img15.jpg";
 import img16 from "./Data/imgs/img16.jpg";
 import img17 from "./Data/imgs/img17.jpg";
 import img18 from "./Data/imgs/img18.jpg";
+import img20 from "./Data/imgs/img20.jpg";
+import img21 from "./Data/imgs/img21.jpg";
+import img22 from "./Data/imgs/img22.jpg";
 
 function Services() {
   return (
@@ -48,6 +51,59 @@ function Services() {
                     postojećih zasada, pravljenje plana prehrane i zaštite
                     izabranog voća, rezidba voća i obilazak samih voćnjaka.
                   </p>
+                  <p className="accFont btnServices text-danger">
+                    Kod podizanja novih zasada vršimo usluge:
+                  </p>
+                  <p className="accFont btnServices">
+                    <span className="text-danger">A.</span> Izrada Projekta (2D
+                    prikaz i Biznis plan) u koje spada:
+                  </p>
+                  <ul className="list-group-flush list-unstyled accFont btnServices">
+                    <li className="list-group-item">
+                      <span className="text-danger">1.</span> Posmatranje i
+                      odabir željene parcele (ekspozicija i nagib).
+                    </li>
+                    <li className="list-group-item">
+                      <span className="text-danger">2.</span> Određivanje tipa
+                      zemljišta (mehaničko i hemijskog sastava).
+                    </li>
+                    <li className="list-group-item">
+                      <span className="text-danger">3.</span> Geometarski premer
+                      parcele i pozicioniranje sadnih mesta (uknjižba parcele u
+                      katastar nepokretnosti).
+                    </li>
+                    <li className="list-group-item">
+                      <span className="text-danger">4.</span> Postavljanje
+                      sistema za navodnjavanje.
+                    </li>
+                    <li className="list-group-item">
+                      <span className="text-danger">5.</span> Preporuka izbora
+                      gajenja željene vrste (sertifikovane i zdrastveno ispravne
+                      sadnice).
+                    </li>
+                    <li className="list-group-item">
+                      <span className="text-danger">6.</span> Prisustvo u toku
+                      sadnje.
+                    </li>
+                  </ul>
+                  <p className="accFont btnServices">
+                    <span className="text-danger">B.</span> Redovno održavanje
+                    zasada (rezidba, izrada plana prihrane i zaštite date
+                    vrste). Kod održavanja već postojećih zasada vršimo usluge:
+                  </p>
+                  <ul className="list-group-flush list-unstyled accFont btnServices">
+                    <li className="list-group-item">
+                      <span className="text-danger">1.</span> Izrade plana
+                      prihrane i zaštite.
+                    </li>
+                    <li className="list-group-item">
+                      <span className="text-danger">2.</span> Rezidbe voća.
+                    </li>
+                    <li className="list-group-item">
+                      <span className="text-danger">3.</span> Redovne kontrole i
+                      obilaska zasada.
+                    </li>
+                  </ul>
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
@@ -131,49 +187,25 @@ function Services() {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1000}>
-              <img className="d-block w-100 slajd" src={img7} alt="vocnjak" />
-              <Carousel.Caption>
-                <h5>Agronom S</h5>
-              </Carousel.Caption>
-            </Carousel.Item>
-            {/* <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img8} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
-            </Carousel.Item> */}
-            <Carousel.Item interval={1000}>
-              <img className="d-block w-100 slajd" src={img9} alt="vocnjak" />
-              <Carousel.Caption>
-                <h5>Agronom S</h5>
-              </Carousel.Caption>
             </Carousel.Item>
-            {/* <Carousel.Item interval={1000}>
+            <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img10} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
-            </Carousel.Item> */}
-            <Carousel.Item interval={1000}>
-              <img className="d-block w-100 slajd" src={img11} alt="vocnjak" />
-              <Carousel.Caption>
-                <h5>Agronom S</h5>
-              </Carousel.Caption>
             </Carousel.Item>
-            {/* <Carousel.Item interval={1000}>
+            <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img12} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
-            </Carousel.Item> */}
-            <Carousel.Item interval={1000}>
-              <img className="d-block w-100 slajd" src={img13} alt="vocnjak" />
-              <Carousel.Caption>
-                <h5>Agronom S</h5>
-              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1000}>
-              <img className="d-block w-100 slajd" src={img14} alt="vocnjak" />
+              <img className="d-block w-100 slajd" src={img13} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
@@ -198,6 +230,24 @@ function Services() {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
               <img className="d-block w-100 slajd" src={img18} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img20} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img21} alt="vocnjak" />
+              <Carousel.Caption>
+                <h5>Agronom S</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img className="d-block w-100 slajd" src={img22} alt="vocnjak" />
               <Carousel.Caption>
                 <h5>Agronom S</h5>
               </Carousel.Caption>
