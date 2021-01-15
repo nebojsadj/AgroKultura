@@ -45,12 +45,6 @@ function Services() {
               </Card.Header>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
-                  <p className="accFont btnServices">
-                    Kompletna usluga u vidu odabira parcele, uzimanje uzoraka
-                    zemljišta, odabira sortimenta, rasporeda sadnje, održavanja
-                    postojećih zasada, pravljenje plana prehrane i zaštite
-                    izabranog voća, rezidba voća i obilazak samih voćnjaka.
-                  </p>
                   <p className="accFont btnServices text-danger">
                     Kod podizanja novih zasada vršimo usluge:
                   </p>
@@ -85,11 +79,16 @@ function Services() {
                       <span className="text-danger">6.</span> Prisustvo u toku
                       sadnje.
                     </li>
+                    <li className="list-group-item">
+                      <span className="text-danger">7.</span> Redovno održavanje
+                      zasada (rezidba, izrada plana prihrane i zaštite date
+                      vrste).
+                    </li>
                   </ul>
                   <p className="accFont btnServices">
-                    <span className="text-danger">B.</span> Redovno održavanje
-                    zasada (rezidba, izrada plana prihrane i zaštite date
-                    vrste). Kod održavanja već postojećih zasada vršimo usluge:
+                    <span className="text-danger">
+                      Kod održavanja već postojećih zasada vršimo usluge:
+                    </span>
                   </p>
                   <ul className="list-group-flush list-unstyled accFont btnServices">
                     <li className="list-group-item">

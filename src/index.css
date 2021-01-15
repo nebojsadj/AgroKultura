@@ -278,6 +278,9 @@ use:hover {
     width: 350px;
     height: 320px;
   }
+  .mhp {
+    font-size: 18px;
+  }
 }
 
 @media all and (max-width: 425px) {
@@ -300,7 +303,7 @@ use:hover {
     height: 40px;
   }
   .m2 {
-    font-size: 18px;
+    font-size: 16px;
   }
   .navNone {
     font-size: 13px;
@@ -387,6 +390,9 @@ use:hover {
   .mSucMsg {
     font-size: 19px;
   }
+  .mhp {
+    font-size: 14px;
+  }
 }
 
 @media all and (max-width: 375px) {
@@ -409,7 +415,7 @@ use:hover {
     height: 37px;
   }
   .m2 {
-    font-size: 16px;
+    font-size: 15px;
   }
   .navNone {
     font-size: 11px;
@@ -428,7 +434,7 @@ use:hover {
     line-height: 2px;
   }
   .m33 {
-    margin-top: 265px;
+    margin-top: 270px;
   }
   .m333 {
     margin-left: 0;
@@ -499,6 +505,9 @@ use:hover {
   }
   .mSucMsg {
     font-size: 17px;
+  }
+  .mhp {
+    font-size: 13px;
   }
 }
 
@@ -618,5 +627,8 @@ use:hover {
   }
   .mSucMsg {
     font-size: 16px;
+  }
+  .mhp {
+    font-size: 11px;
   }
 }

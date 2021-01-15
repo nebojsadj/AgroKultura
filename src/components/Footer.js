@@ -64,10 +64,14 @@ function Footer() {
               </a>
             </li>
             <li className="colorFooter colorLink">
-              {/* <a className="colorLink" href="#" target="blanc"> */}
-              <IoLogoYoutube size="1.5em" className="mlicon mt-1" /> Pogledajte
-              naš Youtube kanal
-              {/* </a> */}
+              <a
+                className="colorLink"
+                href="https://www.youtube.com/channel/UCQyhPIsngZQXH_KJSqsQOQA"
+                target="blanc"
+              >
+                <IoLogoYoutube size="1.5em" className="mlicon mt-1" />{" "}
+                Pogledajte naš YouTube kanal
+              </a>
             </li>
           </ul>
         </div>
