@@ -10,66 +10,53 @@ function Contact() {
   const [target, setTarget] = useState(null);
   const ref = useRef(null);
   const [success, setSuccess] = useState("");
+  const [validated, setValidated] = useState(false);
 
-  // const [valid, setValid] = useState({
-  //   name: "",
-  //   lastName: "",
-  //   email: "",
-  //   phone: "",
-  //   message: "",
-  // });
-  // const { name, lastName, email, phone, message } = valid;
-  // const [check, setCheck] = useState("check");
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+      setValidated(true);
+    } else {
+      event.preventDefault();
+      emailjs
+        .sendForm(
+          "service_jiuu8zf",
+          "template_cp09lds",
+          event.target,
+          "user_C6R6NBvn6aXViZOCdS2ms"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      event.target.reset();
+      setValidated(false);
+      timeOut();
+    }
+  };
 
   const handleClick = (event) => {
     setShow(!show);
     setTarget(event.target);
   };
 
-  // const validate = (e) => {
-  //   e.preventDefault();
-  //   setCheck("");
-  // };
-  // const success = Object.values(valid).filter((el) => el === "");
-  // console.log(success.length);
-
-  // const sendCheck = () => {
-  //   if (email !== "") {
-  //     sendEmail();
-  //   }
-  // };
-
   const timeOut = () => {
     setTimeout(function () {
-      setSuccess("Poruka je uspešno poslata! Hvala na ukazanom poverenju!");
-    }, 500);
+      setSuccess(
+        "Poruka je uspešno poslata! Uskoro će Vas kontaktirati neko iz našeg tima!"
+      );
+    }, 800);
 
     setTimeout(function () {
       setSuccess("");
-    }, 6000);
+    }, 8000);
   };
-
-  function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_jiuu8zf",
-        "template_cp09lds",
-        e.target,
-        "user_C6R6NBvn6aXViZOCdS2ms"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-    timeOut();
-  }
 
   return (
     <div className="container">
@@ -158,84 +145,70 @@ function Contact() {
       </div>
       <div className="row">
         <div className="col-10 offset-1 mt-4 mb-5 contactWrap border">
-          <Form onSubmit={sendEmail} className="mt-4 mb-4 formFont">
+          <Form
+            noValidate
+            validated={validated}
+            onSubmit={handleSubmit}
+            className="mt-4 mb-4 formFont"
+          >
             <Form.Row>
               <Form.Group as={Col} md="4" controlId="validationCustom01">
                 <Form.Label className="text-light">Ime</Form.Label>
                 <Form.Control
-                  // onChange={(e) => setValid({ ...valid, name: e.target.value })}
                   type="text"
                   placeholder="Vaše ime"
                   autoComplete="off"
                   name="name"
-                  // className={name === check && "red"}
+                  required
                 />
               </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationCustom02">
                 <Form.Label className="text-light">Prezime</Form.Label>
                 <Form.Control
-                  // onChange={(e) =>
-                  //   setValid({ ...valid, lastName: e.target.value })
-                  // }
                   type="text"
                   placeholder="Vaše prezime"
                   autoComplete="off"
                   name="lastName"
-                  // className={lastName === check && "red"}
+                  required
                 />
               </Form.Group>
-              <Form.Group as={Col} md="4" controlId="validationCustomUsername">
+              <Form.Group as={Col} md="4" controlId="validationCustom03">
                 <Form.Label className="text-light">Telefon</Form.Label>
                 <Form.Control
-                  // onChange={(e) =>
-                  //   setValid({ ...valid, phone: e.target.value })
-                  // }
                   type="text"
                   placeholder="Vaš telefon"
                   autoComplete="off"
                   name="phone"
-                  // className={phone === check && "red"}
+                  required
                 />
               </Form.Group>
             </Form.Row>
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="validationCustom03">
+              <Form.Group as={Col} md="12" controlId="validationCustom04">
                 <Form.Label className="text-light">Poruka</Form.Label>
                 <Form.Control
-                  // onChange={(e) =>
-                  //   setValid({ ...valid, message: e.target.value })
-                  // }
                   as="textarea"
                   type="text"
                   placeholder="Vaša poruka"
                   autoComplete="off"
                   name="message"
-                  // className={message === check && "red"}
-                />
-              </Form.Group>
-            </Form.Row>
-            <Form.Row>
-              <Form.Group as={Col} md="12" controlId="validationCustom03">
-                <Form.Label className="text-light">Email</Form.Label>
-                <Form.Control
-                  // onChange={(e) =>
-                  //   setValid({ ...valid, email: e.target.value })
-                  // }
-                  type="email"
-                  placeholder="Vaš email"
-                  autoComplete="off"
-                  name="email"
-                  // className={email === check && "red"}
                   required
                 />
               </Form.Group>
             </Form.Row>
-            <Button
-              // onClick={validate}
-              variant="light"
-              type="submit"
-              className="mb-3 posaljiBtn"
-            >
+            <Form.Row>
+              <Form.Group as={Col} md="12" controlId="validationCustom05">
+                <Form.Label className="text-light">Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Vaš email"
+                  autoComplete="off"
+                  name="email"
+                  required
+                />
+              </Form.Group>
+            </Form.Row>
+            <Button variant="light" type="submit" className="mb-3 posaljiBtn">
               Pošalji
             </Button>
           </Form>

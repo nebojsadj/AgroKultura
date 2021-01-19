@@ -114,8 +114,11 @@ hr {
   display: flex;
 }
 
-.red {
-  border: 2px solid red;
+.custom-control-label {
+  color: white !important;
+}
+.form-check-label {
+  color: white !important;
 }
 
 .navsFlex {

@@ -99,9 +99,6 @@ function Partners() {
                             <AiOutlineMail size="1.8em" />{" "}
                             radicablagojevic@rocketmail.com
                           </li>
-                          <li className="list-group-item">
-                            <AiFillFacebook size="1.6em" /> Radica Blagojevic
-                          </li>
                         </ul>
                       </div>
                     </Popover.Content>

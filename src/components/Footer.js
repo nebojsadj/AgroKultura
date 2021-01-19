@@ -95,6 +95,9 @@ function Footer() {
           <p className="text-center sizeCopy colorFooter">
             &copy;{new Date().getFullYear()} Agronom S
           </p>
+          <p className="text-center sizeCopy colorFooter">
+            Design and development by DjordjevicN
+          </p>
         </div>
       </div>
     </div>
