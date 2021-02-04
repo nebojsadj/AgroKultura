@@ -1,5 +1,13 @@
 import React, { useState, useRef } from "react";
-import { Card, Button, Overlay, Popover } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  Overlay,
+  Popover,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
 import img1 from "./Data/imgs/bramS.jpg";
 import img2 from "./Data/imgs/rasadnikDj.png";
 import img3 from "./Data/imgs/geobig.jpg";
@@ -38,9 +46,9 @@ function Partners() {
   };
 
   return (
-    <div className="container mt-5 mb-5">
-      <div className="row contactWrap border">
-        <div className="col mt-3 cardFlex mb-3">
+    <Container className=" mt-5 mb-5">
+      <Row className="contactWrap border">
+        <Col className="mt-3 cardFlex mb-3">
           <Card style={{ width: "18rem", boxShadow: "0 0 9px black" }}>
             <Card.Img variant="top" src={img1} className="cardsImgs" />
             <Card.Body>
@@ -107,8 +115,8 @@ function Partners() {
               </div>
             </Card.Body>
           </Card>
-        </div>
-        <div className="col mt-3 cardFlex mb-3">
+        </Col>
+        <Col className="mt-3 cardFlex mb-3">
           <Card style={{ width: "18rem", boxShadow: "0 0 6px black" }}>
             <Card.Img variant="top" src={img2} className="cardsImgs" />
             <Card.Body>
@@ -195,8 +203,8 @@ function Partners() {
               </div>
             </Card.Body>
           </Card>
-        </div>
-        <div className="col mt-3 cardFlex mb-3">
+        </Col>
+        <Col className="mt-3 cardFlex mb-3">
           <Card style={{ width: "18rem", boxShadow: "0 0 6px black" }}>
             <Card.Img variant="top" src={img3} className="cardsImgs" />
             <Card.Body>
@@ -247,16 +255,6 @@ function Partners() {
                     >
                       <div className="partnersIcons">
                         <ul className="list-group list-unstyled">
-                          {/* <li className="list-group-item">
-                            <a href="https://www.bramsaska.rs" target="blank">
-                              <img
-                                src={wwwIcon}
-                                style={{ width: "33px", height: "33px" }}
-                                alt="wwwIcon"
-                              />{" "}
-                              www.perinsajt.rs
-                            </a>
-                          </li> */}
                           <li className="list-group-item">
                             <FaPhoneAlt className="mt-1" size="1.1em" />{" "}
                             063/664-309
@@ -272,8 +270,8 @@ function Partners() {
               </div>
             </Card.Body>
           </Card>
-        </div>
-        <div className="col mt-3 cardFlex mb-3">
+        </Col>
+        <Col className="mt-3 cardFlex mb-3">
           <Card style={{ width: "18rem", boxShadow: "0 0 6px black" }}>
             <Card.Img variant="top" src={img4} className="cardsImgs" />
             <Card.Body>
@@ -352,9 +350,9 @@ function Partners() {
               </div>
             </Card.Body>
           </Card>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

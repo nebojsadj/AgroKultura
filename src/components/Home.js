@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { data } from "./Data/DataCity";
 import svg from "./Data/serbia.svg";
-import { Dropdown, Modal } from "react-bootstrap";
+import { Col, Container, Dropdown, Modal, Row, Button } from "react-bootstrap";
 import { GiShinyApple, GiStrawberry, GiCherry, GiAlmond } from "react-icons/gi";
 import kajsijaImg from "./Data/imgs/kajsijaImg.jpg";
 import bademImg from "./Data/imgs/bademImg.jpg";
@@ -108,9 +108,9 @@ function Home() {
 
   return (
     <>
-      <div className="container mt-5 mb-5 home">
-        <div className="row">
-          <div className="col-2 mt-5">
+      <Container className="mt-5 mb-5 home">
+        <Row>
+          <Col md={{ span: 2 }} xs={{ span: 2 }} className="mt-5">
             <Dropdown>
               <Dropdown.Toggle
                 variant="light"
@@ -121,7 +121,7 @@ function Home() {
                   size="2em"
                   className="mIcon"
                   style={{ color: "#2db300" }}
-                />{" "}
+                />
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
                 {jabucasto.map((el) => (
@@ -165,8 +165,12 @@ function Home() {
                 ))}
               </Dropdown.Menu>
             </Dropdown>
-          </div>
-          <div className="col-8" style={{ textAlign: "center" }}>
+          </Col>
+          <Col
+            md={{ span: 8 }}
+            xs={{ span: 8 }}
+            style={{ textAlign: "center" }}
+          >
             <h4 className="text-center text-light mt-3 mb-2 m2">
               {centers.orange.length > 0 ? title : "Izaberite voćnu vrstu!"}
             </h4>
@@ -209,8 +213,8 @@ function Home() {
                 );
               })}
             </svg>
-          </div>
-          <div className="col-2 mt-5">
+          </Col>
+          <Col md={{ span: 2 }} xs={{ span: 2 }} className="mt-5">
             <Dropdown>
               <Dropdown.Toggle
                 variant="light"
@@ -221,8 +225,7 @@ function Home() {
                   size="2em"
                   className="mIcon"
                   style={{ color: "#990000" }}
-                />{" "}
-                {/* kosticavo */}
+                />
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
                 {kosticavo.map((el) => (
@@ -250,7 +253,6 @@ function Home() {
                   className="mIcon"
                   style={{ color: "#996633" }}
                 />{" "}
-                {/* jezgrasto */}
               </Dropdown.Toggle>
               <Dropdown.Menu className="bgItems">
                 {jezgrasto.map((el) => (
@@ -267,73 +269,72 @@ function Home() {
                 ))}
               </Dropdown.Menu>
             </Dropdown>
-          </div>
-        </div>
+          </Col>
+        </Row>
         <ColorsInDistricts />
-      </div>
+      </Container>
 
       <Modal
         size="lg"
         show={showModal}
         onHide={() => setShowModal(false)}
         aria-labelledby="example-modal-sizes-title-lg"
+        className="modalCenter"
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">
-            {/* <h4 className="mx-auto d-block text-danger">{district.title}</h4> */}
-          </Modal.Title>
-        </Modal.Header>
+        <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <div className="container">
-            <div className="row">
-              <div className="col-10 offset-1">
-                <h4 className="text-center text-danger">
-                  {` ${district.title}, ${district.city}`}
-                </h4>
-                <p className="mt-3">{district.p1}</p>
-              </div>
-              <hr />
-            </div>
-            <div className="row mt-3">
-              <div className="col-10 offset-1">
-                <h3 className="text-center">{fruit.name}</h3>
-                <img src={pictFruit()} alt={fruit.name} className="img" />
-                <p>{fruit.content.uvod}</p>
-                <h4 className="text-center">{fruit.content.h1}</h4>
-                <h5 className="text-center">{fruit.content.h2}</h5>
-                <p>{fruit.content.p2}</p>
-                <h5 className="text-center">{fruit.content.h3}</h5>
-                <p>{fruit.content.p3}</p>
-                <h5 className="text-center">{fruit.content.h4}</h5>
-                <p>{fruit.content.p4}</p>
-                <h5 className="text-center">{fruit.content.h5}</h5>
-                <p>{fruit.content.p5}</p>
-                <h5 className="text-center">{fruit.content.h6}</h5>
-                <p>{fruit.content.p6}</p>
-                <h5 className="text-center">{fruit.content.h7}</h5>
-                <p>{fruit.content.p7}</p>
-                <h5 className="text-center">{fruit.content.h8}</h5>
-                <p>{fruit.content.p8}</p>
-                <h5 className="text-center">{fruit.content.h9}</h5>
-                <p>{fruit.content.p9}</p>
-                <h5 className="text-center">{fruit.content.h10}</h5>
-                <p>{fruit.content.p10}</p>
-                <h5 className="text-center">{fruit.content.h11}</h5>
-                <p>{fruit.content.p11}</p>
-                <h5 className="text-center">{fruit.content.h12}</h5>
-                <p>{fruit.content.p12}</p>
-                <h5 className="text-center">{fruit.content.h13}</h5>
-                <p>{fruit.content.p13}</p>
-              </div>
-              <div className="col-8 offset-2 mt-3 mb-3">
-                <Link to="/contact">
-                  <button className="btn btn-success form-control">
-                    Postavi pitanje
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <Row>
+            <Col md={{ span: 10, offset: 1 }} xs={{ span: 12 }}>
+              <h4 className="text-center text-danger">
+                {` ${district.title}, ${district.city}`}
+              </h4>
+              <p className="mt-3">{district.p1}</p>
+            </Col>
+            <hr />
+          </Row>
+          <Row className="mt-3">
+            <Col md={{ span: 10, offset: 1 }} xs={{ span: 12 }}>
+              <h3 className="text-center">{fruit.name}</h3>
+              <img src={pictFruit()} alt={fruit.name} className="img" />
+              <p>{fruit.content.uvod}</p>
+              <h4 className="text-center">{fruit.content.h1}</h4>
+              <h5 className="text-center">{fruit.content.h2}</h5>
+              <p>{fruit.content.p2}</p>
+              <h5 className="text-center">{fruit.content.h3}</h5>
+              <p>{fruit.content.p3}</p>
+              <h5 className="text-center">{fruit.content.h4}</h5>
+              <p>{fruit.content.p4}</p>
+              <h5 className="text-center">{fruit.content.h5}</h5>
+              <p>{fruit.content.p5}</p>
+              <h5 className="text-center">{fruit.content.h6}</h5>
+              <p>{fruit.content.p6}</p>
+              <h5 className="text-center">{fruit.content.h7}</h5>
+              <p>{fruit.content.p7}</p>
+              <h5 className="text-center">{fruit.content.h8}</h5>
+              <p>{fruit.content.p8}</p>
+              <h5 className="text-center">{fruit.content.h9}</h5>
+              <p>{fruit.content.p9}</p>
+              <h5 className="text-center">{fruit.content.h10}</h5>
+              <p>{fruit.content.p10}</p>
+              <h5 className="text-center">{fruit.content.h11}</h5>
+              <p>{fruit.content.p11}</p>
+              <h5 className="text-center">{fruit.content.h12}</h5>
+              <p>{fruit.content.p12}</p>
+              <h5 className="text-center">{fruit.content.h13}</h5>
+              <p>{fruit.content.p13}</p>
+            </Col>
+            <Col
+              md={{ span: 4, offset: 4 }}
+              xs={{ span: 8, offset: 2 }}
+              className="mt-3 mb-3"
+            >
+              <Link to="/contact">
+                <Button variant="success" className="form-control">
+                  Postavi pitanje
+                </Button>
+              </Link>
+            </Col>
+          </Row>
         </Modal.Body>
       </Modal>
     </>

@@ -125,7 +125,9 @@ hr {
   display: flex;
   justify-content: center;
 }
-
+.modalCenter {
+  padding: 0 !important;
+}
 .bgItems {
   border: 1px solid rgb(105, 175, 105) !important;
   box-shadow: 0 0 7px black;
@@ -217,7 +219,6 @@ use:hover {
 .partnersIcons {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
 }
 
 @media all and (max-width: 1440px) {
@@ -287,6 +288,12 @@ use:hover {
 }
 
 @media all and (max-width: 425px) {
+  .consultMp {
+    padding: 0 !important;
+  }
+  .footAgr {
+    margin-top: -15px;
+  }
   .custom-switch {
     padding-right: 2.25rem;
   }
@@ -396,9 +403,15 @@ use:hover {
   .mhp {
     font-size: 14px;
   }
+  .design {
+    margin-top: -10px;
+  }
 }
 
 @media all and (max-width: 375px) {
+  .footAgr {
+    margin-top: -25px;
+  }
   .custom-switch {
     padding-right: 2.25rem;
   }

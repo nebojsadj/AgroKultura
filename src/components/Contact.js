@@ -1,5 +1,13 @@
 import React, { useState, useRef } from "react";
-import { Form, Col, Button, Overlay, Popover } from "react-bootstrap";
+import {
+  Form,
+  Col,
+  Button,
+  Overlay,
+  Popover,
+  Container,
+  Row,
+} from "react-bootstrap";
 import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail, AiFillFacebook } from "react-icons/ai";
 import { GrInstagram } from "react-icons/gr";
@@ -59,9 +67,13 @@ function Contact() {
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-10 offset-1 mt-5 contactWrap border">
+    <Container>
+      <Row>
+        <Col
+          md={{ span: 10, offset: 1 }}
+          xs={{ span: 12 }}
+          className="mt-5 contactWrap border"
+        >
           <div className="text-center mt-4">
             <FaPhoneAlt className="text-light call" size="2em" />
             <br />
@@ -91,19 +103,19 @@ function Contact() {
                     as="h1"
                     style={{
                       textAlign: "center",
-                      fontSize: "21px",
+                      fontSize: "18px",
                     }}
                   >
-                    +381 65 6922333
+                    +381 65 6922333 <hr /> +381 65 6922335
                   </Popover.Title>
                   <Popover.Content
                     as="h3"
                     style={{
                       textAlign: "center",
-                      fontSize: "18px",
+                      fontSize: "16px",
                     }}
                   >
-                    Radnim danima: od 9h do 17h
+                    Pozvati od 9h do 17h
                   </Popover.Content>
                 </Popover>
               </Overlay>
@@ -118,10 +130,14 @@ function Contact() {
             opisom, vašeg zasada ili zasada koji planirate da podignete, a jedan
             od naših inženjera će Vas kontaktirati u najkraćem mogućem roku.
           </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-6 offset-3 text-center mt-4 iconBorder">
+        </Col>
+      </Row>
+      <Row>
+        <Col
+          md={{ span: 6, offset: 3 }}
+          xs={{ span: 12 }}
+          className="text-center mt-4 iconBorder"
+        >
           <a
             href="https://mail.google.com/mail/u/0/#inbox?compose=new"
             target="blanc"
@@ -141,10 +157,14 @@ function Contact() {
           >
             <GrInstagram size="2.4em" className="ml-2 iconColor icon3" />
           </a>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-10 offset-1 mt-4 mb-5 contactWrap border">
+        </Col>
+      </Row>
+      <Row>
+        <Col
+          md={{ span: 10, offset: 1 }}
+          xs={{ span: 12 }}
+          className="mt-4 mb-5 contactWrap border"
+        >
           <Form
             noValidate
             validated={validated}
@@ -212,12 +232,12 @@ function Contact() {
               Pošalji
             </Button>
           </Form>
-          <div className="col-10 offset-1">
+          <Col md={{ span: 10, offset: 1 }} xs={{ span: 12 }}>
             <h4 className="text-light text-center mb-3 mSucMsg">{success}</h4>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

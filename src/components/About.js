@@ -1,14 +1,19 @@
 import React from "react";
+import { Col, Image, Row } from "react-bootstrap";
 import img4 from "./Data/imgs/img4.jpg";
 
 function About() {
   return (
-    <div className="col-10 offset-1 contactWrap border text-light">
-      <div className="row">
-        <div className="col text-center mt-3">
-          <img src={img4} alt="kupina" className="aboutImg" />
-        </div>
-        <div className="col mt-3 mb-3">
+    <Col
+      md={{ span: 10, offset: 1 }}
+      xs={{ span: 12 }}
+      className="contactWrap border text-light"
+    >
+      <Row>
+        <Col className="text-center mt-3">
+          <Image src={img4} alt="kupina" className="aboutImg" />
+        </Col>
+        <Col className="mt-3 mb-3">
           <h4 className="text-center m22">Nekoliko reči o nama.</h4>
           <p className="m212">
             <b className="ml-4">Platforma AGRONOM S</b> nastala je kao pozitivno
@@ -22,9 +27,9 @@ function About() {
             načinom proizvodnje koji je prilagođen datim uslovima u kojima se
             nalazi.
           </p>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Col>
   );
 }
 

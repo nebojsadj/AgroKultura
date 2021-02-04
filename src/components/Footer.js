@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail, AiFillFacebook } from "react-icons/ai";
 import { IoLogoYoutube } from "react-icons/io";
+import { Col, Container, Row } from "react-bootstrap";
 
 function Footer() {
   return (
-    <div className="container-fluid bg-dark">
-      <div className="row footerFlex">
-        <div className="col-3 ml-4 p-3">
+    <Container fluid className="bg-dark">
+      <Row className="footerFlex">
+        <Col md={{ span: 3 }} xs={{ span: 3 }} className="ml-4 pt-3">
           <h5 className="text-white mFooter">Stranice</h5>
           <ul className="list-unstyled mt-3">
             <li>
@@ -37,12 +38,15 @@ function Footer() {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className="col p-3">
+        </Col>
+        <Col className="pt-3">
           <h5 className="text-white mFooter">Kontakti</h5>
           <ul className="list-unstyled mt-3">
             <li className="colorFooter colorLink">
               <FaPhoneAlt className="mlicon" size="1.2em" /> +381 65 6922333
+            </li>
+            <li className="colorFooter colorLink">
+              <FaPhoneAlt className="mlicon" size="1.2em" /> +381 65 6922335
             </li>
             <li className="colorFooter colorLink">
               <a
@@ -74,8 +78,8 @@ function Footer() {
               </a>
             </li>
           </ul>
-        </div>
-        <div className="col p-3">
+        </Col>
+        <Col className="pt-3 footAgr">
           <h5 className="text-white text-center mFooter">
             Agronom S platforma
           </h5>
@@ -85,22 +89,22 @@ function Footer() {
               samo da Vam damo sve neophodne informacije.
             </li>
           </ul>
-        </div>
-      </div>
-      <div className="row">
+        </Col>
+      </Row>
+      <Row>
         <div id="line"></div>
-      </div>
-      <div className="row mt-3">
-        <div className="col">
+      </Row>
+      <Row className="mt-3">
+        <Col>
           <p className="text-center sizeCopy colorFooter">
             &copy;{new Date().getFullYear()} Agronom S
           </p>
-          <p className="text-center sizeCopy colorFooter">
+          <p className="text-center sizeCopy colorFooter design">
             Design and development by DjordjevicN
           </p>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

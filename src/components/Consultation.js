@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Form, Col, Button } from "react-bootstrap";
+import { Form, Col, Button, Container, Row } from "react-bootstrap";
 import emailjs from "emailjs-com";
+import { options } from "./Data/DataText";
 
 function Consultation() {
   const [success, setSuccess] = useState("");
@@ -48,9 +49,13 @@ function Consultation() {
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-10 offset-1 mt-5 contactWrap border">
+    <Container>
+      <Row>
+        <Col
+          md={{ span: 10, offset: 1 }}
+          xs={{ span: 12 }}
+          className="mt-5 contactWrap border"
+        >
           <h4 className="text-center text-light mt-3 m222">
             Želite da zakažete konsultacije?
           </h4>
@@ -64,17 +69,25 @@ function Consultation() {
             sledeća polja i neko iz našeg stručnog tima će Vam se obratiti u
             najkraćem mogućem roku.
           </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-10 offset-1 mt-5 mb-5 contactWrap border">
+        </Col>
+      </Row>
+      <Row>
+        <Col
+          md={{ span: 10, offset: 1 }}
+          xs={{ span: 12 }}
+          className="mt-5 mb-5 contactWrap border"
+        >
           <Form
             className="mt-3 formFont"
             noValidate
             validated={validated}
             onSubmit={handleSubmit}
           >
-            <Form.Group as={Col} controlId="validationCustom01">
+            <Form.Group
+              as={Col}
+              className="consultMp"
+              controlId="validationCustom01"
+            >
               <Form.Label className="text-light">Ime i prezime</Form.Label>
               <Form.Control
                 type="text"
@@ -84,7 +97,11 @@ function Consultation() {
                 required
               />
             </Form.Group>
-            <Form.Group as={Col} controlId="validationCustom02">
+            <Form.Group
+              as={Col}
+              className="consultMp"
+              controlId="validationCustom02"
+            >
               <Form.Label className="text-light">Okrug</Form.Label>
               <Form.Control
                 as="select"
@@ -92,39 +109,16 @@ function Consultation() {
                 name="okrug"
                 autoComplete="off"
               >
-                <option>Izaberite Vaš okrug</option>
-                <option>Severno-bački</option>
-                <option>Srednje-banatski</option>
-                <option>Severno-banatski</option>
-                <option>Južno-banatski</option>
-                <option>Zapadno-bački</option>
-                <option>Južno-bački</option>
-                <option>Sremski</option>
-                <option>Mačvanski</option>
-                <option>Kolubarski</option>
-                <option>Podunavski</option>
-                <option>Braničevski</option>
-                <option>Šumadijski</option>
-                <option>Pomoravski</option>
-                <option>Borski</option>
-                <option>Zaječarski</option>
-                <option>Zlatiborski</option>
-                <option>Moravički</option>
-                <option>Raški</option>
-                <option>Rasinski</option>
-                <option>Nišavski</option>
-                <option>Toplički</option>
-                <option>Pirotski</option>
-                <option>Jablanički</option>
-                <option>Pčinjski</option>
-                <option>Kosovski</option>
-                <option>Pećki</option>
-                <option>Prizrenski</option>
-                <option>Kosovsko-mitrovački</option>
-                <option>Kosovsko-pomoravski</option>
+                {options.map((el) => (
+                  <option key={el}>{el}</option>
+                ))}
               </Form.Control>
             </Form.Group>
-            <Form.Group as={Col} controlId="validationCustom03">
+            <Form.Group
+              as={Col}
+              className="consultMp"
+              controlId="validationCustom03"
+            >
               <Form.Label className="text-light">Opština</Form.Label>
               <Form.Control
                 autoComplete="off"
@@ -134,7 +128,11 @@ function Consultation() {
                 required
               />
             </Form.Group>
-            <Form.Group as={Col} controlId="validationCustom04">
+            <Form.Group
+              as={Col}
+              className="consultMp"
+              controlId="validationCustom04"
+            >
               <Form.Label className="text-light">Kontakt telefon</Form.Label>
               <Form.Control
                 type="text"
@@ -144,7 +142,11 @@ function Consultation() {
                 required
               />
             </Form.Group>
-            <Form.Group as={Col} controlId="validationCustom05">
+            <Form.Group
+              as={Col}
+              className="consultMp"
+              controlId="validationCustom05"
+            >
               <Form.Label className="text-light">Email</Form.Label>
               <Form.Control
                 type="email"
@@ -154,7 +156,11 @@ function Consultation() {
                 required
               />
             </Form.Group>
-            <Form.Group as={Col} controlId="validationCustom06">
+            <Form.Group
+              as={Col}
+              className="consultMp"
+              controlId="validationCustom06"
+            >
               <Form.Label className="text-light">
                 Površina za podizanje zasada
               </Form.Label>
@@ -166,7 +172,11 @@ function Consultation() {
                 required
               />
             </Form.Group>
-            <Form.Group as={Col} controlId="validationCustom07">
+            <Form.Group
+              as={Col}
+              className="consultMp"
+              controlId="validationCustom07"
+            >
               <Form.Label className="text-light">Vrsta voća</Form.Label>
               <Form.Control
                 type="text"
@@ -176,7 +186,10 @@ function Consultation() {
                 required
               />
             </Form.Group>
-            <Form.Group className="ml-3" controlId="validationCustom08">
+            <Form.Group
+              className="ml-3 consultMb"
+              controlId="validationCustom08"
+            >
               <Form.Label className="text-light">
                 Registrovano gazdinstvo?
               </Form.Label>
@@ -307,12 +320,12 @@ function Consultation() {
               Pošalji
             </Button>
           </Form>
-          <div className="col-10 offset-1">
+          <Col md={{ span: 10, offset: 1 }} xs={{ span: 12 }}>
             <h4 className="text-white text-center mb-3 mSucMsg">{success}</h4>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
